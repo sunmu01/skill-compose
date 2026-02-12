@@ -1,0 +1,99 @@
+{
+  "title": "実行トレース",
+  "description": "デバッグと分析のためにエージェント実行履歴を表示",
+  "exportAll": "すべてエクスポート",
+  "backToSkills": "スキルに戻る",
+  "filterPlaceholder": "ステータスでフィルター",
+  "all": "すべて",
+  "success": "成功",
+  "failed": "失敗",
+  "turns": "{{count}} ターン",
+  "tokens": "{{count}} トークン",
+  "showing": "{{total}} 件中 {{from}}–{{to}} を表示",
+  "showingAll": "{{total}} 件中 {{count}} 件を表示",
+  "page": "ページ {{current}} / {{total}}",
+  "list": {
+    "title": "実行トレース",
+    "searchPlaceholder": "トレースを検索...",
+    "filterByStatus": "ステータスでフィルター",
+    "filterBySkill": "スキルでフィルター",
+    "allStatuses": "すべてのステータス",
+    "allSkills": "すべてのスキル",
+    "empty": "実行トレースが見つかりません",
+    "emptyDescription": "エージェントを実行してトレースを生成"
+  },
+  "card": {
+    "request": "リクエスト",
+    "response": "レスポンス",
+    "duration": "所要時間",
+    "turns": "{{count}} ターン",
+    "turns_other": "{{count}} ターン",
+    "tokens": "{{count}} トークン",
+    "tokens_other": "{{count}} トークン",
+    "skills": "使用したスキル",
+    "tools": "呼び出したツール"
+  },
+  "detail": {
+    "title": "トレース詳細",
+    "overview": "概要",
+    "steps": "ステップ",
+    "request": "リクエスト",
+    "response": "レスポンス",
+    "answer": "回答",
+    "error": "エラー",
+    "skillsUsed": "使用したスキル",
+    "metadata": "メタデータ",
+    "backToTraces": "トレース",
+    "loadError": "トレースの読み込みに失敗しました",
+    "turnsCount": "{{count}} ターン",
+    "tokenStats": "入力 {{input}} / 出力 {{output}} トークン"
+  },
+  "overview": {
+    "traceId": "トレースID",
+    "status": "ステータス",
+    "startedAt": "開始時刻",
+    "completedAt": "完了時刻",
+    "duration": "所要時間",
+    "turns": "ターン数",
+    "inputTokens": "入力トークン",
+    "outputTokens": "出力トークン",
+    "totalTokens": "合計トークン",
+    "skillsUsed": "使用したスキル",
+    "toolsCalled": "呼び出したツール",
+    "error": "エラー"
+  },
+  "steps": {
+    "title": "実行ステップ",
+    "titleWithCount": "実行ステップ ({{count}})",
+    "step": "ステップ {{number}}",
+    "toolCall": "ツール呼び出し",
+    "toolResult": "ツール結果",
+    "input": "入力",
+    "output": "出力",
+    "result": "結果",
+    "message": "メッセージ",
+    "thinking": "思考",
+    "empty": "ステップが記録されていません"
+  },
+  "status": {
+    "pending": "保留中",
+    "running": "実行中",
+    "completed": "完了",
+    "failed": "失敗",
+    "cancelled": "キャンセル済み"
+  },
+  "delete": {
+    "title": "トレースを削除",
+    "confirm": "このトレースを削除してもよろしいですか？",
+    "description": "この操作は取り消せません。",
+    "deleting": "削除中...",
+    "success": "トレースが正常に削除されました",
+    "error": "トレースの削除に失敗しました"
+  },
+  "export": {
+    "title": "トレースをエクスポート",
+    "asJson": "JSONでエクスポート",
+    "success": "トレースが正常にエクスポートされました",
+    "error": "トレースのエクスポートに失敗しました"
+  }
+}

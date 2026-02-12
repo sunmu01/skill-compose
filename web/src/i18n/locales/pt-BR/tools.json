@@ -1,0 +1,70 @@
+{
+  "title": "Ferramentas Integradas",
+  "description": "Ferramentas principais sempre disponíveis para o Agente",
+  "availableTools": "Ferramentas Disponíveis",
+  "builtinInfo": "As ferramentas integradas são capacidades principais com implementações em Python. Não podem ser modificadas pela interface.",
+  "toolsCount": "{{count}} ferramentas",
+  "list": {
+    "title": "Descoberta de Ferramentas",
+    "searchPlaceholder": "Pesquisar ferramentas...",
+    "filterByCategory": "Filtrar por categoria",
+    "filterBySource": "Filtrar por fonte",
+    "allCategories": "Todas as categorias",
+    "allSources": "Todas as fontes",
+    "empty": "Nenhuma ferramenta disponível",
+    "emptyDescription": "Nenhuma ferramenta corresponde aos seus critérios de pesquisa"
+  },
+  "categoryLabels": {
+    "skill_management": "Gestão de Habilidades",
+    "code_execution": "Execução de Código",
+    "code_exploration": "Exploração de Código",
+    "output": "Gestão de Saída"
+  },
+  "categoryDescriptions": {
+    "skill_management": "Ferramentas para descobrir e ler habilidades",
+    "code_execution": "Ferramentas para executar código e comandos",
+    "code_exploration": "Ferramentas para pesquisar e ler código fonte",
+    "output": "Ferramentas para reportar e gerenciar arquivos de saída"
+  },
+  "card": {
+    "category": "Categoria",
+    "source": "Fonte",
+    "parameters": "{{count}} parâmetro",
+    "parameters_other": "{{count}} parâmetros"
+  },
+  "detail": {
+    "description": "Descrição",
+    "category": "Categoria",
+    "source": "Fonte",
+    "parameters": "Parâmetros",
+    "required": "Obrigatório",
+    "optional": "Opcional",
+    "type": "Tipo",
+    "default": "Padrão",
+    "noParameters": "Sem parâmetros"
+  },
+  "categories": {
+    "all": "Todas",
+    "builtin": "Integradas",
+    "mcp": "MCP",
+    "skill": "Habilidade",
+    "code": "Execução de Código",
+    "file": "Operações de Arquivo",
+    "web": "Web",
+    "search": "Pesquisa"
+  },
+  "sources": {
+    "builtin": "Integrada",
+    "mcp": "Servidor MCP",
+    "skill": "Habilidade"
+  },
+  "kernel": {
+    "title": "Kernel de Código",
+    "reset": "Reiniciar Kernel",
+    "resetting": "Reiniciando...",
+    "resetSuccess": "Kernel reiniciado com sucesso",
+    "resetError": "Falha ao reiniciar kernel",
+    "resetConfirm": "Reiniciar o kernel de execução de código?",
+    "resetDescription": "Isso limpará todas as variáveis e estado do executor de código."
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "組み込みツール",
+  "description": "エージェントで常に利用可能なコアツール",
+  "availableTools": "利用可能なツール",
+  "builtinInfo": "組み込みツールはPython実装を持つコア機能です。UIからは変更できません。",
+  "toolsCount": "{{count}} ツール",
+  "list": {
+    "title": "ツール探索",
+    "searchPlaceholder": "ツールを検索...",
+    "filterByCategory": "カテゴリでフィルター",
+    "filterBySource": "ソースでフィルター",
+    "allCategories": "すべてのカテゴリ",
+    "allSources": "すべてのソース",
+    "empty": "利用可能なツールがありません",
+    "emptyDescription": "検索条件に一致するツールがありません"
+  },
+  "categoryLabels": {
+    "skill_management": "スキル管理",
+    "code_execution": "コード実行",
+    "code_exploration": "コード探索",
+    "output": "出力管理"
+  },
+  "categoryDescriptions": {
+    "skill_management": "スキルを発見・読み取るツール",
+    "code_execution": "コードとコマンドを実行するツール",
+    "code_exploration": "ソースコードを検索・読み取るツール",
+    "output": "出力ファイルを報告・管理するツール"
+  },
+  "card": {
+    "category": "カテゴリ",
+    "source": "ソース",
+    "parameters": "{{count}} パラメータ",
+    "parameters_other": "{{count}} パラメータ"
+  },
+  "detail": {
+    "description": "説明",
+    "category": "カテゴリ",
+    "source": "ソース",
+    "parameters": "パラメータ",
+    "required": "必須",
+    "optional": "任意",
+    "type": "タイプ",
+    "default": "デフォルト",
+    "noParameters": "パラメータなし"
+  },
+  "categories": {
+    "all": "すべて",
+    "builtin": "組み込み",
+    "mcp": "MCP",
+    "skill": "スキル",
+    "code": "コード実行",
+    "file": "ファイル操作",
+    "web": "Web",
+    "search": "検索"
+  },
+  "sources": {
+    "builtin": "組み込み",
+    "mcp": "MCPサーバー",
+    "skill": "スキル"
+  },
+  "kernel": {
+    "title": "コードカーネル",
+    "reset": "カーネルをリセット",
+    "resetting": "リセット中...",
+    "resetSuccess": "カーネルが正常にリセットされました",
+    "resetError": "カーネルのリセットに失敗しました",
+    "resetConfirm": "コード実行カーネルをリセットしますか？",
+    "resetDescription": "コードエグゼキュータのすべての変数と状態がクリアされます。"
+  }
+}

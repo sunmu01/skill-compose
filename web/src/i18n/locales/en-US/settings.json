@@ -1,0 +1,83 @@
+{
+  "title": "Environment",
+  "description": "Manage environment variables for the system",
+  "configStatus": "Configuration Status",
+  "variablesInEnv": "Variables in .env",
+  "configFile": "Config file",
+  "customEnvVars": "Custom Environment Variables",
+  "customEnvVarsDescription": "User-defined variables for custom configuration.",
+  "presetEnvVars": "Preset Environment Variables",
+  "presetEnvVarsDescription": "API keys, tokens, and other sensitive credentials from .env file.",
+  "noPresetConfigured": "No API keys configured",
+  "noEnvConfigured": "No environment variables configured",
+  "noEnvConfiguredHelp": "Click \"Add Variable\" to create your first variable",
+  "failedToLoad": "Failed to load configuration",
+  "apiServerCheck": "Make sure the API server is running",
+  "sensitive": "Sensitive",
+  "sensitiveWarning": "This looks like a sensitive value and will be masked",
+  "leaveEmptyToKeep": "Leave empty to keep the current value",
+  "varNameHelp": "Use uppercase letters, numbers, and underscores",
+  "env": {
+    "title": "Environment Variables",
+    "description": "Configure API keys and system settings",
+    "searchPlaceholder": "Search variables...",
+    "key": "Key",
+    "value": "Value",
+    "source": "Source",
+    "sources": {
+      "env": "Environment",
+      "dotenv": ".env file",
+      "runtime": "Runtime"
+    },
+    "empty": "No environment variables",
+    "emptyDescription": "Add environment variables to configure the system",
+    "masked": "••••••••",
+    "showValue": "Show value",
+    "hideValue": "Hide value"
+  },
+  "add": {
+    "title": "Add Variable",
+    "key": "Variable Name",
+    "keyPlaceholder": "MY_API_KEY",
+    "keyHelp": "Use uppercase letters and underscores",
+    "value": "Value",
+    "valuePlaceholder": "Enter value...",
+    "adding": "Adding...",
+    "success": "Variable added successfully",
+    "error": "Failed to add variable"
+  },
+  "edit": {
+    "title": "Edit Variable",
+    "saving": "Saving...",
+    "success": "Variable updated successfully",
+    "error": "Failed to update variable"
+  },
+  "delete": {
+    "title": "Delete Variable",
+    "confirm": "Are you sure you want to delete \"{{key}}\"?",
+    "description": "This may affect system functionality.",
+    "deleting": "Deleting...",
+    "success": "Variable deleted successfully",
+    "error": "Failed to delete variable"
+  },
+  "system": {
+    "title": "System",
+    "export": "Export System Data",
+    "exportDescription": "Export all skills and agents to a ZIP file",
+    "exporting": "Exporting...",
+    "exportSuccess": "System data exported successfully",
+    "exportError": "Failed to export system data",
+    "import": "Import System Data",
+    "importDescription": "Import skills and agents from a ZIP file",
+    "importing": "Importing...",
+    "importSuccess": "System data imported successfully",
+    "importError": "Failed to import system data"
+  },
+  "about": {
+    "title": "About",
+    "version": "Version",
+    "documentation": "Documentation",
+    "github": "GitHub",
+    "license": "License"
+  }
+}

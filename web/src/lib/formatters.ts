@@ -1,0 +1,43 @@
+export function formatDateTime(dateStr: string): string {
+  return new Date(dateStr).toLocaleString();
+}
+
+export function formatDuration(ms: number | null): string {
+  if (ms == null) return '-';
+  if (ms < 1000) return `${ms}ms`;
+  if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
+  return `${(ms / 60000).toFixed(1)}m`;
+}
+
+export function formatFileSize(bytes: number): string {
+  if (bytes === 0) return '0 B';
+  const k = 1024;
+  const sizes = ['B', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+}
+
+export function getLanguageFromFilename(filename: string): string {
+  const ext = filename.split('.').pop()?.toLowerCase() || '';
+  const languageMap: Record<string, string> = {
+    'py': 'python',
+    'js': 'javascript',
+    'ts': 'typescript',
+    'tsx': 'tsx',
+    'jsx': 'jsx',
+    'json': 'json',
+    'md': 'markdown',
+    'yaml': 'yaml',
+    'yml': 'yaml',
+    'sh': 'bash',
+    'bash': 'bash',
+    'css': 'css',
+    'html': 'html',
+    'xml': 'xml',
+    'sql': 'sql',
+    'toml': 'toml',
+    'ini': 'ini',
+    'txt': 'text',
+  };
+  return languageMap[ext] || 'text';
+}

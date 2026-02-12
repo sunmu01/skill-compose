@@ -1,0 +1,77 @@
+{
+  "title": "スキルのインポート",
+  "description": "ファイルまたは GitHub リポジトリからスキルをインポート",
+  "backToSkills": "スキル一覧に戻る",
+  "tabs": {
+    "github": "GitHub から",
+    "file": "ファイルアップロード",
+    "folder": "フォルダアップロード"
+  },
+  "github": {
+    "title": "GitHub からインポート",
+    "description": "SKILL.md を含むスキルディレクトリの GitHub URL を入力してください",
+    "urlLabel": "GitHub URL",
+    "placeholder": "https://github.com/owner/repo/tree/branch/path/to/skill",
+    "examples": "例：https://github.com/owner/skill-name または https://github.com/owner/repo/tree/main/skills/my-skill",
+    "button": "GitHub からインポート",
+    "hints": {
+      "httpsRequired": "URL は https:// で始まる必要があります",
+      "githubRequired": "URL は GitHub のリンク (github.com) である必要があります",
+      "useHttps": "http:// ではなく https:// を使用してください",
+      "ownerRepoRequired": "URL にはオーナーとリポジトリ名が必要です：github.com/owner/repo",
+      "treeFormat": "サブディレクトリには /tree/branch/path 形式を使用してください",
+      "branchRequired": "/tree/ の後にブランチ名が必要です",
+      "expectedFormat": "期待される形式：https://github.com/owner/repo または https://github.com/owner/repo/tree/branch/path"
+    }
+  },
+  "file": {
+    "title": "スキルファイルのアップロード",
+    "description": ".skill または .zip ファイルをドラッグ＆ドロップ、またはクリックして参照。",
+    "dropHere": ".skill または .zip ファイルをここにドロップ",
+    "orClickToBrowse": "またはクリックして参照",
+    "invalidFile": ".skill または .zip ファイルを選択してください",
+    "button": "スキルをインポート"
+  },
+  "folder": {
+    "title": "スキルフォルダのアップロード",
+    "description": "SKILL.md を含むフォルダをドラッグ＆ドロップ、またはクリックして参照。",
+    "dropHere": "スキルフォルダをここにドロップ",
+    "orClickToBrowse": "またはクリックして参照",
+    "filesCount": "{{count}} ファイル",
+    "button": "スキルをインポート",
+    "errors": {
+      "cannotRead": "ドロップされたアイテムを読み取れませんでした",
+      "notFolder": "ファイルではなくフォルダをドロップしてください。.skill/.zip ファイルは「ファイルアップロード」タブをご利用ください。",
+      "noSkillMd": "フォルダのルートに SKILL.md ファイルが必要です",
+      "readFailed": "フォルダの内容の読み取りに失敗しました"
+    }
+  },
+  "status": {
+    "importing": "インポート中...",
+    "importFailed": "インポート失敗",
+    "importSuccess": "インポート成功！",
+    "viewSkill": "スキルを表示 →",
+    "importAnother": "別のスキルをインポート",
+    "genericError": "インポートに失敗しました",
+    "githubError": "GitHub からのインポートに失敗しました",
+    "skippedFiles": "{{count}} 個のファイルがスキップされました（非対応の種類：.exe、.dll、.so 等のコンパイル済みファイル）",
+    "skippedFilesList": "スキップ：{{files}}"
+  },
+  "about": {
+    "title": "スキルインポートについて",
+    "description": "スキルは <code>.skill</code>/<code>.zip</code> ファイル、フォルダ、または GitHub リポジトリからインポートできます。以下の構造が必要です：",
+    "skillMd": "<strong>SKILL.md</strong> - スキル定義ドキュメント（必須）",
+    "scripts": "<strong>scripts/</strong> - Python スクリプトとユーティリティ",
+    "references": "<strong>references/</strong> - 参考ドキュメント",
+    "assets": "<strong>assets/</strong> - 画像やその他のアセット",
+    "schema": "<strong>schema.json</strong> - 入出力スキーマ（任意）",
+    "conflictNote": "同名のスキルが既に存在する場合、新しい名前でコピーを作成できます。"
+  },
+  "conflict": {
+    "title": "スキルが既に存在します",
+    "description": "<strong>{{name}}</strong> という名前のスキルが既に存在します（現在のバージョン：v{{version}}）。",
+    "question": "どうしますか？",
+    "creating": "作成中...",
+    "createCopy": "コピーを作成"
+  }
+}

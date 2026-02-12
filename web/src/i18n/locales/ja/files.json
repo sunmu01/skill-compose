@@ -1,0 +1,69 @@
+{
+  "title": "ファイルブラウザ",
+  "description": "プロジェクトファイルを閲覧、プレビュー、管理",
+  "browser": {
+    "title": "ファイルブラウザ",
+    "path": "パス",
+    "name": "名前",
+    "size": "サイズ",
+    "modified": "更新日時",
+    "type": "タイプ",
+    "empty": "空のディレクトリ",
+    "emptyDescription": "このディレクトリにファイルがありません",
+    "rootPath": "ルート"
+  },
+  "preview": {
+    "title": "プレビュー",
+    "noPreview": "プレビューできません",
+    "tooLarge": "ファイルが大きすぎてプレビューできません",
+    "binary": "バイナリファイル",
+    "image": "画像"
+  },
+  "upload": {
+    "title": "ファイルをアップロード",
+    "dropzone": "ここにファイルをドロップ、またはクリックして参照",
+    "uploading": "{{name}} をアップロード中...",
+    "success": "ファイルが正常にアップロードされました",
+    "error": "ファイルのアップロードに失敗しました",
+    "maxSize": "最大ファイルサイズ: {{size}}"
+  },
+  "download": {
+    "title": "ダウンロード",
+    "file": "ファイルをダウンロード",
+    "folder": "フォルダをZIPでダウンロード",
+    "preparing": "ダウンロードを準備中...",
+    "success": "ダウンロードを開始しました",
+    "error": "ダウンロードに失敗しました"
+  },
+  "delete": {
+    "title": "削除",
+    "confirm": "\"{{name}}\" を削除してもよろしいですか？",
+    "description": "この操作は取り消せません。",
+    "deleting": "削除中...",
+    "success": "正常に削除されました",
+    "error": "削除に失敗しました"
+  },
+  "types": {
+    "folder": "フォルダ",
+    "file": "ファイル",
+    "image": "画像",
+    "video": "動画",
+    "audio": "音声",
+    "document": "ドキュメント",
+    "code": "コード",
+    "archive": "アーカイブ",
+    "unknown": "不明"
+  },
+  "breadcrumb": {
+    "home": "ホーム",
+    "files": "ファイル"
+  },
+  "sort": {
+    "nameAsc": "名前 (A→Z)",
+    "nameDesc": "名前 (Z→A)",
+    "modifiedNewest": "更新日時 (新しい順)",
+    "modifiedOldest": "更新日時 (古い順)",
+    "sizeLargest": "サイズ (大きい順)",
+    "sizeSmallest": "サイズ (小さい順)"
+  }
+}

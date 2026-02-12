@@ -1,0 +1,116 @@
+# ==============================================================================
+# Skills API - Docker Ignore (Root)
+# ==============================================================================
+# Files and directories to exclude when building Docker images
+# ==============================================================================
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node.js
+web/node_modules/
+gemini-mcp-server/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# Next.js build output (will rebuild in Docker)
+web/.next/
+web/out/
+
+# Documentation (keep SKILL.md and essential docs)
+PRD.md
+PHASE*.md
+article*.md
+article*.html
+report_*.md
+converted_markdown/
+
+# Test files
+tests/
+test/
+*.test.ts
+*.test.js
+*.spec.ts
+*.spec.js
+
+# Docker volumes (data persisted separately)
+docker/volumes/
+
+# Data directories (will be mounted as volumes)
+data/
+logs/
+uploads/
+
+# Local config with secrets
+.env
+.env.local
+config/mcp-secrets.json
+
+# Misc
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.bak
+
+# Large files that aren't needed for build
+*.pdf
+*.doc
+*.docx
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+*.zip
+*.tar.gz
+*.rar
+
+# Old Dockerfile (use docker/api/Dockerfile instead)
+Dockerfile
+requirements-docker.txt

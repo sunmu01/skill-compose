@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "skills": "Habilidades",
+    "agents": "Agentes",
+    "tools": "Herramientas",
+    "mcp": "MCP",
+    "traces": "Trazas",
+    "files": "Archivos",
+    "settings": "Configuración",
+    "environment": "Entorno",
+    "executors": "Ejecutores",
+    "backup": "Copia de seguridad",
+    "terminal": "Terminal",
+    "sessions": "Sesiones",
+    "more": "Más"
+  },
+  "actions": {
+    "add": "Añadir",
+    "create": "Crear",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "update": "Actualizar",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "apply": "Aplicar",
+    "reset": "Restablecer",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "export": "Exportar",
+    "import": "Importar",
+    "download": "Descargar",
+    "upload": "Subir",
+    "copy": "Copiar",
+    "refresh": "Actualizar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "run": "Ejecutar",
+    "stop": "Detener",
+    "retry": "Reintentar",
+    "clear": "Limpiar",
+    "selectAll": "Seleccionar todo",
+    "deselectAll": "Deseleccionar todo",
+    "view": "Ver",
+    "preview": "Vista previa",
+    "loading": "Cargando...",
+    "processing": "Procesando..."
+  },
+  "status": {
+    "success": "Éxito",
+    "error": "Error",
+    "warning": "Advertencia",
+    "info": "Información",
+    "pending": "Pendiente",
+    "running": "Ejecutando",
+    "completed": "Completado",
+    "failed": "Fallido",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "enabled": "Habilitado",
+    "disabled": "Deshabilitado",
+    "published": "Publicado",
+    "unpublished": "No publicado"
+  },
+  "time": {
+    "now": "Ahora mismo",
+    "minutesAgo": "Hace {{count}} minuto",
+    "minutesAgo_other": "Hace {{count}} minutos",
+    "hoursAgo": "Hace {{count}} hora",
+    "hoursAgo_other": "Hace {{count}} horas",
+    "daysAgo": "Hace {{count}} día",
+    "daysAgo_other": "Hace {{count}} días",
+    "today": "Hoy",
+    "yesterday": "Ayer"
+  },
+  "validation": {
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Dirección de correo inválida",
+    "minLength": "Debe tener al menos {{min}} caracteres",
+    "maxLength": "Debe tener como máximo {{max}} caracteres",
+    "invalidUrl": "URL inválida"
+  },
+  "empty": {
+    "noData": "Sin datos disponibles",
+    "noResults": "No se encontraron resultados",
+    "noItems": "Sin elementos"
+  },
+  "errors": {
+    "generic": "Algo salió mal",
+    "networkError": "Error de red. Por favor, inténtelo de nuevo.",
+    "notFound": "No encontrado",
+    "unauthorized": "No autorizado",
+    "forbidden": "Acceso denegado",
+    "serverError": "Error del servidor"
+  },
+  "confirm": {
+    "delete": "¿Está seguro de que desea eliminar esto?",
+    "unsavedChanges": "Tiene cambios sin guardar. ¿Está seguro de que desea salir?"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "language": {
+    "select": "Seleccionar idioma",
+    "current": "Idioma"
+  },
+  "tooltips": {
+    "documentation": "Documentación",
+    "files": "Archivos",
+    "environment": "Entorno",
+    "toggleTheme": "Cambiar tema",
+    "language": "Idioma",
+    "terminal": "Terminal",
+    "discord": "Comunidad Discord"
+  }
+}

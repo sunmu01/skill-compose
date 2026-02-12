@@ -1,0 +1,83 @@
+{
+  "title": "Entorno",
+  "description": "Gestiona las variables de entorno del sistema",
+  "configStatus": "Estado de Configuración",
+  "variablesInEnv": "Variables en .env",
+  "configFile": "Archivo de configuración",
+  "customEnvVars": "Variables de Entorno Personalizadas",
+  "customEnvVarsDescription": "Variables definidas por el usuario para configuración personalizada.",
+  "presetEnvVars": "Variables de Entorno Preestablecidas",
+  "presetEnvVarsDescription": "Claves API, tokens y otras credenciales sensibles del archivo .env.",
+  "noPresetConfigured": "No hay claves API configuradas",
+  "noEnvConfigured": "No hay variables de entorno configuradas",
+  "noEnvConfiguredHelp": "Haz clic en \"Añadir Variable\" para crear tu primera variable",
+  "failedToLoad": "Error al cargar la configuración",
+  "apiServerCheck": "Asegúrate de que el servidor API esté ejecutándose",
+  "sensitive": "Sensible",
+  "sensitiveWarning": "Esto parece un valor sensible y será enmascarado",
+  "leaveEmptyToKeep": "Deja vacío para mantener el valor actual",
+  "varNameHelp": "Usa letras mayúsculas, números y guiones bajos",
+  "env": {
+    "title": "Variables de Entorno",
+    "description": "Configura claves API y ajustes del sistema",
+    "searchPlaceholder": "Buscar variables...",
+    "key": "Clave",
+    "value": "Valor",
+    "source": "Fuente",
+    "sources": {
+      "env": "Entorno",
+      "dotenv": "Archivo .env",
+      "runtime": "Tiempo de ejecución"
+    },
+    "empty": "Sin variables de entorno",
+    "emptyDescription": "Añade variables de entorno para configurar el sistema",
+    "masked": "••••••••",
+    "showValue": "Mostrar valor",
+    "hideValue": "Ocultar valor"
+  },
+  "add": {
+    "title": "Añadir Variable",
+    "key": "Nombre de la Variable",
+    "keyPlaceholder": "MI_CLAVE_API",
+    "keyHelp": "Usa letras mayúsculas y guiones bajos",
+    "value": "Valor",
+    "valuePlaceholder": "Ingresa el valor...",
+    "adding": "Añadiendo...",
+    "success": "Variable añadida exitosamente",
+    "error": "Error al añadir la variable"
+  },
+  "edit": {
+    "title": "Editar Variable",
+    "saving": "Guardando...",
+    "success": "Variable actualizada exitosamente",
+    "error": "Error al actualizar la variable"
+  },
+  "delete": {
+    "title": "Eliminar Variable",
+    "confirm": "¿Está seguro de que desea eliminar \"{{key}}\"?",
+    "description": "Esto puede afectar la funcionalidad del sistema.",
+    "deleting": "Eliminando...",
+    "success": "Variable eliminada exitosamente",
+    "error": "Error al eliminar la variable"
+  },
+  "system": {
+    "title": "Sistema",
+    "export": "Exportar Datos del Sistema",
+    "exportDescription": "Exportar todas las habilidades y agentes a un archivo ZIP",
+    "exporting": "Exportando...",
+    "exportSuccess": "Datos del sistema exportados exitosamente",
+    "exportError": "Error al exportar los datos del sistema",
+    "import": "Importar Datos del Sistema",
+    "importDescription": "Importar habilidades y agentes desde un archivo ZIP",
+    "importing": "Importando...",
+    "importSuccess": "Datos del sistema importados exitosamente",
+    "importError": "Error al importar los datos del sistema"
+  },
+  "about": {
+    "title": "Acerca de",
+    "version": "Versión",
+    "documentation": "Documentación",
+    "github": "GitHub",
+    "license": "Licencia"
+  }
+}

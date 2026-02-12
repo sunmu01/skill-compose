@@ -1,0 +1,56 @@
+# ==============================================================================
+# Executor Base - Python 3.11 Basic Environment
+# ==============================================================================
+# Provides a minimal Python environment for general-purpose code execution.
+#
+# Included packages:
+# - requests, httpx (HTTP clients)
+# - pyyaml, toml (config file parsing)
+# - python-dotenv (environment management)
+# - pillow (image processing)
+# ==============================================================================
+
+FROM python:3.11-slim
+
+LABEL org.opencontainers.image.title="Skills Executor - Base"
+LABEL org.opencontainers.image.description="Python 3.11 basic execution environment"
+LABEL org.opencontainers.image.version="1.0.0"
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install executor server dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install common Python packages
+RUN pip install --no-cache-dir \
+    requests \
+    httpx \
+    pyyaml \
+    toml \
+    python-dotenv \
+    pillow \
+    beautifulsoup4 \
+    lxml
+
+# Copy executor server and kernel module
+COPY executor_server.py .
+COPY ipython_kernel.py .
+
+# Environment
+ENV EXECUTOR_NAME=base
+ENV WORKSPACES_DIR=/app/workspaces
+ENV PYTHONUNBUFFERED=1
+
+# Create workspaces directory
+RUN mkdir -p /app/workspaces
+
+EXPOSE 62680
+
+CMD uvicorn executor_server:app --host 0.0.0.0 --port ${EXECUTOR_PORT:-62680}

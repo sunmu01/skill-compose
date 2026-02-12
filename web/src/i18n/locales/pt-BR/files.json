@@ -1,0 +1,69 @@
+{
+  "title": "Navegador de Arquivos",
+  "description": "Navegue, visualize e gerencie arquivos do projeto",
+  "browser": {
+    "title": "Navegador de Arquivos",
+    "path": "Caminho",
+    "name": "Nome",
+    "size": "Tamanho",
+    "modified": "Modificado",
+    "type": "Tipo",
+    "empty": "Diretório vazio",
+    "emptyDescription": "Nenhum arquivo neste diretório",
+    "rootPath": "Raiz"
+  },
+  "preview": {
+    "title": "Visualização",
+    "noPreview": "Visualização não disponível",
+    "tooLarge": "Arquivo muito grande para visualizar",
+    "binary": "Arquivo binário",
+    "image": "Imagem"
+  },
+  "upload": {
+    "title": "Enviar Arquivos",
+    "dropzone": "Arraste arquivos aqui ou clique para navegar",
+    "uploading": "Enviando {{name}}...",
+    "success": "Arquivo enviado com sucesso",
+    "error": "Falha ao enviar arquivo",
+    "maxSize": "Tamanho máximo de arquivo: {{size}}"
+  },
+  "download": {
+    "title": "Baixar",
+    "file": "Baixar arquivo",
+    "folder": "Baixar pasta como ZIP",
+    "preparing": "Preparando download...",
+    "success": "Download iniciado",
+    "error": "Falha ao baixar"
+  },
+  "delete": {
+    "title": "Excluir",
+    "confirm": "Tem certeza de que deseja excluir \"{{name}}\"?",
+    "description": "Esta ação não pode ser desfeita.",
+    "deleting": "Excluindo...",
+    "success": "Excluído com sucesso",
+    "error": "Falha ao excluir"
+  },
+  "types": {
+    "folder": "Pasta",
+    "file": "Arquivo",
+    "image": "Imagem",
+    "video": "Vídeo",
+    "audio": "Áudio",
+    "document": "Documento",
+    "code": "Código",
+    "archive": "Arquivo compactado",
+    "unknown": "Desconhecido"
+  },
+  "breadcrumb": {
+    "home": "Início",
+    "files": "Arquivos"
+  },
+  "sort": {
+    "nameAsc": "Nome (A→Z)",
+    "nameDesc": "Nome (Z→A)",
+    "modifiedNewest": "Modificado (Mais recente)",
+    "modifiedOldest": "Modificado (Mais antigo)",
+    "sizeLargest": "Tamanho (Maior)",
+    "sizeSmallest": "Tamanho (Menor)"
+  }
+}

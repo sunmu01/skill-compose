@@ -1,0 +1,69 @@
+{
+  "title": "File Browser",
+  "description": "Browse, preview, and manage project files",
+  "browser": {
+    "title": "File Browser",
+    "path": "Path",
+    "name": "Name",
+    "size": "Size",
+    "modified": "Modified",
+    "type": "Type",
+    "empty": "Empty directory",
+    "emptyDescription": "No files in this directory",
+    "rootPath": "Root"
+  },
+  "preview": {
+    "title": "Preview",
+    "noPreview": "Preview not available",
+    "tooLarge": "File too large to preview",
+    "binary": "Binary file",
+    "image": "Image"
+  },
+  "upload": {
+    "title": "Upload Files",
+    "dropzone": "Drop files here or click to browse",
+    "uploading": "Uploading {{name}}...",
+    "success": "File uploaded successfully",
+    "error": "Failed to upload file",
+    "maxSize": "Maximum file size: {{size}}"
+  },
+  "download": {
+    "title": "Download",
+    "file": "Download file",
+    "folder": "Download folder as ZIP",
+    "preparing": "Preparing download...",
+    "success": "Download started",
+    "error": "Failed to download"
+  },
+  "delete": {
+    "title": "Delete",
+    "confirm": "Are you sure you want to delete \"{{name}}\"?",
+    "description": "This action cannot be undone.",
+    "deleting": "Deleting...",
+    "success": "Deleted successfully",
+    "error": "Failed to delete"
+  },
+  "types": {
+    "folder": "Folder",
+    "file": "File",
+    "image": "Image",
+    "video": "Video",
+    "audio": "Audio",
+    "document": "Document",
+    "code": "Code",
+    "archive": "Archive",
+    "unknown": "Unknown"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "files": "Files"
+  },
+  "sort": {
+    "nameAsc": "Name (A→Z)",
+    "nameDesc": "Name (Z→A)",
+    "modifiedNewest": "Modified (Newest)",
+    "modifiedOldest": "Modified (Oldest)",
+    "sizeLargest": "Size (Largest)",
+    "sizeSmallest": "Size (Smallest)"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "エグゼキューター",
+  "description": "コード実行環境とそのステータスを表示",
+  "builtinExecutors": "組み込みエグゼキューター",
+  "noExecutors": "エグゼキューターなし",
+  "noExecutorsDescription": "実行環境が設定されていません。",
+  "total": "合計: {{count}} 個のエグゼキューター",
+  "refresh": "更新",
+  "lastUpdated": "{{time}} に更新",
+  "failedToLoad": "エグゼキューターの読み込みに失敗しました",
+  "status": {
+    "online": "オンライン",
+    "offline": "オフライン",
+    "error": "エラー"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "skills": {
+    "markdown-to-storyboard": {
+      "category": "Content Creation"
+    },
+    "storyboard-to-slides": {
+      "category": "Content Creation"
+    },
+    "doc": {
+      "category": "Document Processing"
+    },
+    "speech": {
+      "category": "Content Creation"
+    },
+    "spreadsheet": {
+      "category": "Document Processing"
+    },
+    "pubmed-database": {
+      "category": "Research & Knowledge",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills/tree/main/scientific-skills/pubmed-database",
+      "author": "K-Dense-AI"
+    },
+    "pdb-database": {
+      "category": "Research & Knowledge",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills/tree/main/scientific-skills/pdb-database",
+      "author": "K-Dense-AI"
+    },
+    "rdkit": {
+      "category": "Research & Knowledge",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills/tree/main/scientific-skills/rdkit",
+      "author": "K-Dense-AI"
+    },
+    "biopython": {
+      "category": "Research & Knowledge",
+      "source": "https://github.com/K-Dense-AI/claude-scientific-skills/tree/main/scientific-skills/biopython",
+      "author": "K-Dense-AI"
+    },
+    "gemini-imagegen": {
+      "category": "Media & Design"
+    },
+    "media-downloader": {
+      "category": "Media & Design"
+    },
+    "audio-extractor": {
+      "category": "Media & Design"
+    },
+    "sora": {
+      "category": "Media & Design"
+    },
+    "imagegen": {
+      "category": "Media & Design"
+    }
+  }
+}

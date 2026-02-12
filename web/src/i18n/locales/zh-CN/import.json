@@ -1,0 +1,77 @@
+{
+  "title": "导入技能",
+  "description": "从文件或 GitHub 仓库导入技能",
+  "backToSkills": "返回技能列表",
+  "tabs": {
+    "github": "从 GitHub",
+    "file": "上传文件",
+    "folder": "上传文件夹"
+  },
+  "github": {
+    "title": "从 GitHub 导入",
+    "description": "输入包含 SKILL.md 的技能目录的 GitHub URL",
+    "urlLabel": "GitHub URL",
+    "placeholder": "https://github.com/owner/repo/tree/branch/path/to/skill",
+    "examples": "示例：https://github.com/owner/skill-name 或 https://github.com/owner/repo/tree/main/skills/my-skill",
+    "button": "从 GitHub 导入",
+    "hints": {
+      "httpsRequired": "URL 必须以 https:// 开头",
+      "githubRequired": "URL 必须是 GitHub 链接 (github.com)",
+      "useHttps": "请使用 https:// 而非 http://",
+      "ownerRepoRequired": "URL 必须包含所有者和仓库名：github.com/owner/repo",
+      "treeFormat": "子目录请使用 /tree/branch/path 格式",
+      "branchRequired": "/tree/ 后必须指定分支名",
+      "expectedFormat": "预期格式：https://github.com/owner/repo 或 https://github.com/owner/repo/tree/branch/path"
+    }
+  },
+  "file": {
+    "title": "上传技能文件",
+    "description": "拖放 .skill 或 .zip 文件，或点击浏览。",
+    "dropHere": "将 .skill 或 .zip 文件拖放到此处",
+    "orClickToBrowse": "或点击浏览",
+    "invalidFile": "请选择 .skill 或 .zip 文件",
+    "button": "导入技能"
+  },
+  "folder": {
+    "title": "上传技能文件夹",
+    "description": "拖放包含 SKILL.md 的文件夹，或点击浏览。",
+    "dropHere": "将技能文件夹拖放到此处",
+    "orClickToBrowse": "或点击浏览",
+    "filesCount": "{{count}} 个文件",
+    "button": "导入技能",
+    "errors": {
+      "cannotRead": "无法读取拖放的内容",
+      "notFolder": "请拖放文件夹而非文件。如需上传 .skill/.zip 文件，请使用「上传文件」标签页。",
+      "noSkillMd": "文件夹根目录必须包含 SKILL.md 文件",
+      "readFailed": "读取文件夹内容失败"
+    }
+  },
+  "status": {
+    "importing": "导入中...",
+    "importFailed": "导入失败",
+    "importSuccess": "导入成功！",
+    "viewSkill": "查看技能 →",
+    "importAnother": "导入另一个",
+    "genericError": "导入失败",
+    "githubError": "GitHub 导入失败",
+    "skippedFiles": "{{count}} 个文件被跳过（不支持的类型：.exe、.dll、.so 等编译产物）",
+    "skippedFilesList": "已跳过：{{files}}"
+  },
+  "about": {
+    "title": "关于技能导入",
+    "description": "技能可以从 <code>.skill</code>/<code>.zip</code> 文件、文件夹或 GitHub 仓库导入。结构须包含：",
+    "skillMd": "<strong>SKILL.md</strong> - 技能定义文档（必需）",
+    "scripts": "<strong>scripts/</strong> - Python 脚本和工具",
+    "references": "<strong>references/</strong> - 参考文档",
+    "assets": "<strong>assets/</strong> - 图片和其他资源",
+    "schema": "<strong>schema.json</strong> - 输入/输出模式（可选）",
+    "conflictNote": "如果同名技能已存在，可以选择创建一个新名称的副本。"
+  },
+  "conflict": {
+    "title": "技能已存在",
+    "description": "名为 <strong>{{name}}</strong> 的技能已存在（当前版本：v{{version}}）。",
+    "question": "您想要怎么做？",
+    "creating": "创建中...",
+    "createCopy": "创建副本"
+  }
+}

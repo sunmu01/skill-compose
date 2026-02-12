@@ -1,0 +1,9 @@
+{
+  "title": "Terminal",
+  "description": "Interactive bash terminal in the current environment.",
+  "status": {
+    "connected": "Connected",
+    "connecting": "Connecting...",
+    "disconnected": "Disconnected"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "内置工具",
+  "description": "Agent 始终可用的核心工具",
+  "availableTools": "可用工具",
+  "builtinInfo": "内置工具是具有 Python 实现的核心能力。无法通过界面修改。",
+  "toolsCount": "{{count}} 个工具",
+  "list": {
+    "title": "工具发现",
+    "searchPlaceholder": "搜索工具...",
+    "filterByCategory": "按类别筛选",
+    "filterBySource": "按来源筛选",
+    "allCategories": "所有类别",
+    "allSources": "所有来源",
+    "empty": "暂无可用工具",
+    "emptyDescription": "没有符合搜索条件的工具"
+  },
+  "categoryLabels": {
+    "skill_management": "技能管理",
+    "code_execution": "代码执行",
+    "code_exploration": "代码探索",
+    "output": "输出管理"
+  },
+  "categoryDescriptions": {
+    "skill_management": "用于发现和读取技能的工具",
+    "code_execution": "用于运行代码和命令的工具",
+    "code_exploration": "用于搜索和读取源代码的工具",
+    "output": "用于报告和管理输出文件的工具"
+  },
+  "card": {
+    "category": "类别",
+    "source": "来源",
+    "parameters": "{{count}} 个参数",
+    "parameters_other": "{{count}} 个参数"
+  },
+  "detail": {
+    "description": "描述",
+    "category": "类别",
+    "source": "来源",
+    "parameters": "参数",
+    "required": "必填",
+    "optional": "可选",
+    "type": "类型",
+    "default": "默认值",
+    "noParameters": "无参数"
+  },
+  "categories": {
+    "all": "全部",
+    "builtin": "内置",
+    "mcp": "MCP",
+    "skill": "技能",
+    "code": "代码执行",
+    "file": "文件操作",
+    "web": "网络",
+    "search": "搜索"
+  },
+  "sources": {
+    "builtin": "内置",
+    "mcp": "MCP 服务器",
+    "skill": "技能"
+  },
+  "kernel": {
+    "title": "代码内核",
+    "reset": "重置内核",
+    "resetting": "重置中...",
+    "resetSuccess": "内核重置成功",
+    "resetError": "重置内核失败",
+    "resetConfirm": "重置代码执行内核？",
+    "resetDescription": "这将清除代码执行器中的所有变量和状态。"
+  }
+}

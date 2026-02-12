@@ -1,0 +1,99 @@
+{
+  "title": "执行追踪",
+  "description": "查看代理执行历史以进行调试和分析",
+  "exportAll": "导出全部",
+  "backToSkills": "返回技能",
+  "filterPlaceholder": "按状态筛选",
+  "all": "全部",
+  "success": "成功",
+  "failed": "失败",
+  "turns": "{{count}} 轮",
+  "tokens": "{{count}} tokens",
+  "showing": "显示 {{from}}–{{to}}，共 {{total}} 条追踪",
+  "showingAll": "显示 {{count}} 条，共 {{total}} 条追踪",
+  "page": "第 {{current}} / {{total}} 页",
+  "list": {
+    "title": "执行追踪",
+    "searchPlaceholder": "搜索追踪...",
+    "filterByStatus": "按状态筛选",
+    "filterBySkill": "按技能筛选",
+    "allStatuses": "所有状态",
+    "allSkills": "所有技能",
+    "empty": "未找到执行追踪",
+    "emptyDescription": "运行代理以生成追踪"
+  },
+  "card": {
+    "request": "请求",
+    "response": "响应",
+    "duration": "耗时",
+    "turns": "{{count}} 轮",
+    "turns_other": "{{count}} 轮",
+    "tokens": "{{count}} token",
+    "tokens_other": "{{count}} tokens",
+    "skills": "使用的技能",
+    "tools": "调用的工具"
+  },
+  "detail": {
+    "title": "追踪详情",
+    "overview": "概览",
+    "steps": "步骤",
+    "request": "请求",
+    "response": "响应",
+    "answer": "回答",
+    "error": "错误",
+    "skillsUsed": "使用的技能",
+    "metadata": "元数据",
+    "backToTraces": "追踪",
+    "loadError": "加载追踪失败",
+    "turnsCount": "{{count}} 轮",
+    "tokenStats": "输入 {{input}} / 输出 {{output}} tokens"
+  },
+  "overview": {
+    "traceId": "追踪 ID",
+    "status": "状态",
+    "startedAt": "开始时间",
+    "completedAt": "完成时间",
+    "duration": "耗时",
+    "turns": "轮数",
+    "inputTokens": "输入 Tokens",
+    "outputTokens": "输出 Tokens",
+    "totalTokens": "总 Tokens",
+    "skillsUsed": "使用的技能",
+    "toolsCalled": "调用的工具",
+    "error": "错误"
+  },
+  "steps": {
+    "title": "执行步骤",
+    "titleWithCount": "执行步骤 ({{count}})",
+    "step": "步骤 {{number}}",
+    "toolCall": "工具调用",
+    "toolResult": "工具结果",
+    "input": "输入",
+    "output": "输出",
+    "result": "结果",
+    "message": "消息",
+    "thinking": "思考",
+    "empty": "暂无步骤记录"
+  },
+  "status": {
+    "pending": "等待中",
+    "running": "运行中",
+    "completed": "已完成",
+    "failed": "失败",
+    "cancelled": "已取消"
+  },
+  "delete": {
+    "title": "删除追踪",
+    "confirm": "确定要删除此追踪吗？",
+    "description": "此操作无法撤销。",
+    "deleting": "删除中...",
+    "success": "追踪删除成功",
+    "error": "删除追踪失败"
+  },
+  "export": {
+    "title": "导出追踪",
+    "asJson": "导出为 JSON",
+    "success": "追踪导出成功",
+    "error": "导出追踪失败"
+  }
+}

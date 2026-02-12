@@ -1,0 +1,47 @@
+{
+  "title": "Copia de seguridad y restauración",
+  "description": "Crea copias de seguridad completas del sistema y restaura desde instantáneas anteriores. Las copias incluyen todos los datos de la base de datos y archivos del disco.",
+  "create": {
+    "title": "Crear copia de seguridad",
+    "description": "Exporta todas las habilidades, agentes, trazas, sesiones y archivos del disco en un archivo ZIP descargable.",
+    "button": "Crear copia de seguridad",
+    "creating": "Creando copia de seguridad...",
+    "success": "Copia de seguridad creada correctamente",
+    "error": "Error al crear la copia de seguridad",
+    "includeEnv": "Incluir archivo .env",
+    "includeEnvWarning": "El archivo .env puede contener claves API y secretos. Inclúyalo solo en copias de seguridad privadas."
+  },
+  "restore": {
+    "title": "Restaurar desde copia de seguridad",
+    "description": "Suba un archivo ZIP de copia de seguridad para restaurar todos los datos. Esto reemplazará TODOS los datos existentes.",
+    "button": "Restaurar",
+    "restoring": "Restaurando...",
+    "success": "Sistema restaurado correctamente",
+    "error": "Error al restaurar la copia de seguridad",
+    "confirmTitle": "Confirmar restauración",
+    "confirmWarning": "Esto ELIMINARÁ todos los datos existentes y los reemplazará con el contenido de la copia de seguridad. Esta acción no se puede deshacer.",
+    "confirmMessage": "Todas las habilidades, agentes, trazas y sesiones actuales se eliminarán permanentemente y se reemplazarán. Se creará automáticamente una instantánea de seguridad del estado actual antes de restaurar.",
+    "confirmButton": "Sí, restaurar",
+    "snapshot": "Instantánea previa a la restauración guardada como:",
+    "dragDrop": "Arrastre y suelte un archivo ZIP de copia de seguridad aquí",
+    "orClickToBrowse": "o haga clic en cualquier lugar para explorar",
+    "selectFile": "Elegir archivo .zip"
+  },
+  "list": {
+    "title": "Copias de seguridad disponibles",
+    "empty": "No se encontraron copias de seguridad",
+    "emptyDescription": "Cree su primera copia de seguridad para comenzar.",
+    "filename": "Nombre del archivo",
+    "size": "Tamaño",
+    "createdAt": "Creado",
+    "restoreFrom": "Restaurar",
+    "download": "Descargar"
+  },
+  "stats": {
+    "skills": "Habilidades",
+    "skillVersions": "Versiones",
+    "agents": "Agentes",
+    "traces": "Trazas",
+    "sessions": "Sesiones"
+  }
+}

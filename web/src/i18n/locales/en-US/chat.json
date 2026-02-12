@@ -1,0 +1,82 @@
+{
+  "title": "Chat",
+  "placeholder": "Type a message...",
+  "send": "Send",
+  "stop": "Stop",
+  "clear": "Clear chat",
+  "clearConfirm": "Clear all messages?",
+  "clearDescription": "This will remove all messages from the current conversation.",
+  "newChat": "New Chat",
+  "thinking": "Thinking...",
+  "generating": "Generating...",
+  "openFullscreen": "Open in new window",
+  "reset": "Reset",
+  "home": "Home",
+  "config": "Config",
+  "startConversation": "Start a conversation",
+  "typeMessageToBegin": "Type a message below to begin chatting with the agent.",
+  "clickConfigToCustomize": "Click Config above to customize settings.",
+  "configuration": {
+    "title": "Configuration",
+    "agent": "Agent",
+    "selectAgent": "Select agent",
+    "customConfig": "Custom Config",
+    "skills": "Skills",
+    "selectSkills": "Select skills",
+    "tools": "Tools",
+    "selectTools": "Select tools",
+    "allTools": "All tools",
+    "mcpServers": "MCP Servers",
+    "selectMcpServers": "Select MCP servers",
+    "maxTurns": "Max Turns",
+    "systemPrompt": "System Prompt",
+    "systemPromptPlaceholder": "Custom system prompt...",
+    "model": "Model",
+    "selectModel": "Select model",
+    "executor": "Executor",
+    "executorLocal": "Local",
+    "executorDescription": "Select execution environment for code"
+  },
+  "files": {
+    "title": "Files",
+    "upload": "Upload files",
+    "dragDrop": "Drag and drop files here",
+    "uploading": "Uploading...",
+    "uploaded": "{{count}} file uploaded",
+    "uploaded_other": "{{count}} files uploaded",
+    "remove": "Remove file",
+    "maxSize": "Max file size: {{size}}",
+    "invalidType": "Invalid file type"
+  },
+  "output": {
+    "title": "Output Files",
+    "download": "Download",
+    "downloadAll": "Download all",
+    "noFiles": "No output files"
+  },
+  "toolCall": {
+    "title": "Tool Call",
+    "name": "Tool",
+    "arguments": "Arguments",
+    "result": "Result",
+    "error": "Error",
+    "duration": "Duration",
+    "expand": "Expand",
+    "collapse": "Collapse"
+  },
+  "error": {
+    "sendFailed": "Failed to send message",
+    "connectionLost": "Connection lost",
+    "tryAgain": "Try again"
+  },
+  "history": {
+    "title": "History",
+    "empty": "No messages yet",
+    "loadMore": "Load more"
+  },
+  "role": {
+    "user": "You",
+    "assistant": "Assistant",
+    "system": "System"
+  }
+}

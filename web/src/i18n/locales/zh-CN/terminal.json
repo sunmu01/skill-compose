@@ -1,0 +1,9 @@
+{
+  "title": "终端",
+  "description": "当前环境的交互式 bash 终端。",
+  "status": {
+    "connected": "已连接",
+    "connecting": "连接中...",
+    "disconnected": "未连接"
+  }
+}

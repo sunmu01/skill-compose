@@ -1,0 +1,5 @@
+# Docker volumes (data persistence)
+volumes/
+
+# Environment file with secrets
+.env

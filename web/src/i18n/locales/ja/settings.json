@@ -1,0 +1,83 @@
+{
+  "title": "環境変数",
+  "description": "システムの環境変数を管理",
+  "configStatus": "設定ステータス",
+  "variablesInEnv": ".env内の変数",
+  "configFile": "設定ファイル",
+  "customEnvVars": "カスタム環境変数",
+  "customEnvVarsDescription": "ユーザー定義の設定変数。",
+  "presetEnvVars": "プリセット環境変数",
+  "presetEnvVarsDescription": ".envファイルのAPIキー、トークン、その他の機密認証情報。",
+  "noPresetConfigured": "APIキーが設定されていません",
+  "noEnvConfigured": "環境変数が設定されていません",
+  "noEnvConfiguredHelp": "「変数を追加」をクリックして最初の変数を作成",
+  "failedToLoad": "設定の読み込みに失敗しました",
+  "apiServerCheck": "APIサーバーが実行されていることを確認してください",
+  "sensitive": "機密",
+  "sensitiveWarning": "これは機密値のようです。マスクされて表示されます",
+  "leaveEmptyToKeep": "現在の値を保持するには空のままにしてください",
+  "varNameHelp": "大文字、数字、アンダースコアを使用",
+  "env": {
+    "title": "環境変数",
+    "description": "APIキーとシステム設定を構成",
+    "searchPlaceholder": "変数を検索...",
+    "key": "キー",
+    "value": "値",
+    "source": "ソース",
+    "sources": {
+      "env": "環境",
+      "dotenv": ".envファイル",
+      "runtime": "ランタイム"
+    },
+    "empty": "環境変数がありません",
+    "emptyDescription": "システムを設定するために環境変数を追加",
+    "masked": "••••••••",
+    "showValue": "値を表示",
+    "hideValue": "値を隠す"
+  },
+  "add": {
+    "title": "変数を追加",
+    "key": "変数名",
+    "keyPlaceholder": "MY_API_KEY",
+    "keyHelp": "大文字とアンダースコアを使用",
+    "value": "値",
+    "valuePlaceholder": "値を入力...",
+    "adding": "追加中...",
+    "success": "変数が正常に追加されました",
+    "error": "変数の追加に失敗しました"
+  },
+  "edit": {
+    "title": "変数を編集",
+    "saving": "保存中...",
+    "success": "変数が正常に更新されました",
+    "error": "変数の更新に失敗しました"
+  },
+  "delete": {
+    "title": "変数を削除",
+    "confirm": "\"{{key}}\" を削除してもよろしいですか？",
+    "description": "システムの機能に影響する可能性があります。",
+    "deleting": "削除中...",
+    "success": "変数が正常に削除されました",
+    "error": "変数の削除に失敗しました"
+  },
+  "system": {
+    "title": "システム",
+    "export": "システムデータをエクスポート",
+    "exportDescription": "すべてのスキルとエージェントをZIPファイルにエクスポート",
+    "exporting": "エクスポート中...",
+    "exportSuccess": "システムデータが正常にエクスポートされました",
+    "exportError": "システムデータのエクスポートに失敗しました",
+    "import": "システムデータをインポート",
+    "importDescription": "ZIPファイルからスキルとエージェントをインポート",
+    "importing": "インポート中...",
+    "importSuccess": "システムデータが正常にインポートされました",
+    "importError": "システムデータのインポートに失敗しました"
+  },
+  "about": {
+    "title": "このアプリについて",
+    "version": "バージョン",
+    "documentation": "ドキュメント",
+    "github": "GitHub",
+    "license": "ライセンス"
+  }
+}

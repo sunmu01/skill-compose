@@ -1,0 +1,16 @@
+{
+  "title": "执行器",
+  "description": "查看代码执行环境及其状态",
+  "builtinExecutors": "内置执行器",
+  "noExecutors": "暂无执行器",
+  "noExecutorsDescription": "尚未配置任何执行环境。",
+  "total": "共 {{count}} 个执行器",
+  "refresh": "刷新",
+  "lastUpdated": "更新于 {{time}}",
+  "failedToLoad": "加载执行器失败",
+  "status": {
+    "online": "在线",
+    "offline": "离线",
+    "error": "错误"
+  }
+}

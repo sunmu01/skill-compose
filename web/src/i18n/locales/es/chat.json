@@ -1,0 +1,82 @@
+{
+  "title": "Chat",
+  "placeholder": "Escribe un mensaje...",
+  "send": "Enviar",
+  "stop": "Detener",
+  "clear": "Limpiar chat",
+  "clearConfirm": "¿Limpiar todos los mensajes?",
+  "clearDescription": "Esto eliminará todos los mensajes de la conversación actual.",
+  "newChat": "Nuevo Chat",
+  "thinking": "Pensando...",
+  "generating": "Generando...",
+  "openFullscreen": "Abrir en nueva ventana",
+  "reset": "Restablecer",
+  "home": "Inicio",
+  "config": "Configurar",
+  "startConversation": "Iniciar una conversación",
+  "typeMessageToBegin": "Escribe un mensaje abajo para comenzar a chatear con el agente.",
+  "clickConfigToCustomize": "Haz clic en Configurar arriba para personalizar los ajustes.",
+  "configuration": {
+    "title": "Configuración",
+    "agent": "Agente",
+    "selectAgent": "Seleccionar agente",
+    "customConfig": "Configuración Personalizada",
+    "skills": "Habilidades",
+    "selectSkills": "Seleccionar habilidades",
+    "tools": "Herramientas",
+    "selectTools": "Seleccionar herramientas",
+    "allTools": "Todas las herramientas",
+    "mcpServers": "Servidores MCP",
+    "selectMcpServers": "Seleccionar servidores MCP",
+    "maxTurns": "Turnos Máximos",
+    "systemPrompt": "Prompt del Sistema",
+    "systemPromptPlaceholder": "Prompt del sistema personalizado...",
+    "model": "Modelo",
+    "selectModel": "Seleccionar modelo",
+    "executor": "Ejecutor",
+    "executorLocal": "Local",
+    "executorDescription": "Seleccionar entorno de ejecución de código"
+  },
+  "files": {
+    "title": "Archivos",
+    "upload": "Subir archivos",
+    "dragDrop": "Arrastra y suelta archivos aquí",
+    "uploading": "Subiendo...",
+    "uploaded": "{{count}} archivo subido",
+    "uploaded_other": "{{count}} archivos subidos",
+    "remove": "Eliminar archivo",
+    "maxSize": "Tamaño máximo de archivo: {{size}}",
+    "invalidType": "Tipo de archivo inválido"
+  },
+  "output": {
+    "title": "Archivos de Salida",
+    "download": "Descargar",
+    "downloadAll": "Descargar todo",
+    "noFiles": "Sin archivos de salida"
+  },
+  "toolCall": {
+    "title": "Llamada de Herramienta",
+    "name": "Herramienta",
+    "arguments": "Argumentos",
+    "result": "Resultado",
+    "error": "Error",
+    "duration": "Duración",
+    "expand": "Expandir",
+    "collapse": "Colapsar"
+  },
+  "error": {
+    "sendFailed": "Error al enviar el mensaje",
+    "connectionLost": "Conexión perdida",
+    "tryAgain": "Intentar de nuevo"
+  },
+  "history": {
+    "title": "Historial",
+    "empty": "Aún no hay mensajes",
+    "loadMore": "Cargar más"
+  },
+  "role": {
+    "user": "Tú",
+    "assistant": "Asistente",
+    "system": "Sistema"
+  }
+}

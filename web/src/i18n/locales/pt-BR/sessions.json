@@ -1,0 +1,40 @@
+{
+  "title": "Sessões",
+  "description": "Visualizar e gerenciar sessões de chat de agentes publicados",
+  "empty": "Nenhuma sessão encontrada",
+  "emptyDescription": "Converse com um agente publicado para criar sessões",
+  "filters": {
+    "allAgents": "Todos os agentes",
+    "byAgent": "Filtrar por agente"
+  },
+  "card": {
+    "messageCount": "{{count}} mensagens",
+    "firstMessage": "Primeira mensagem",
+    "created": "Criado",
+    "lastActive": "Última atividade",
+    "noMessage": "Sessão vazia"
+  },
+  "delete": {
+    "title": "Excluir sessão",
+    "confirm": "Tem certeza de que deseja excluir esta sessão? Esta ação não pode ser desfeita.",
+    "success": "Sessão excluída com sucesso",
+    "error": "Falha ao excluir a sessão"
+  },
+  "deleteAll": {
+    "title": "Excluir todas as sessões",
+    "confirm": "Tem certeza de que deseja excluir todas as sessões deste agente?",
+    "success": "Todas as sessões excluídas",
+    "error": "Falha ao excluir as sessões"
+  },
+  "detail": {
+    "title": "Detalhe da sessão",
+    "user": "Usuário",
+    "assistant": "Assistente",
+    "noMessages": "Nenhuma mensagem nesta sessão"
+  },
+  "pagination": {
+    "showing": "Mostrando {{from}}–{{to}} de {{total}} sessões",
+    "page": "Página {{current}} / {{total}}",
+    "showingAll": "Mostrando {{count}} de {{total}} sessões"
+  }
+}

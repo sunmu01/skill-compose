@@ -1,0 +1,16 @@
+{
+  "title": "Executors",
+  "description": "View code execution environments and their status",
+  "builtinExecutors": "Built-in Executors",
+  "noExecutors": "No Executors",
+  "noExecutorsDescription": "No execution environments are configured.",
+  "total": "Total: {{count}} executors",
+  "refresh": "Refresh",
+  "lastUpdated": "Updated {{time}}",
+  "failedToLoad": "Failed to load executors",
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "error": "Error"
+  }
+}

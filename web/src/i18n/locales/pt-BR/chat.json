@@ -1,0 +1,82 @@
+{
+  "title": "Chat",
+  "placeholder": "Digite uma mensagem...",
+  "send": "Enviar",
+  "stop": "Parar",
+  "clear": "Limpar chat",
+  "clearConfirm": "Limpar todas as mensagens?",
+  "clearDescription": "Isso removerá todas as mensagens da conversa atual.",
+  "newChat": "Novo Chat",
+  "thinking": "Pensando...",
+  "generating": "Gerando...",
+  "openFullscreen": "Abrir em nova janela",
+  "reset": "Redefinir",
+  "home": "Início",
+  "config": "Configurar",
+  "startConversation": "Iniciar uma conversa",
+  "typeMessageToBegin": "Digite uma mensagem abaixo para começar a conversar com o agente.",
+  "clickConfigToCustomize": "Clique em Configurar acima para personalizar as configurações.",
+  "configuration": {
+    "title": "Configuração",
+    "agent": "Agente",
+    "selectAgent": "Selecionar agente",
+    "customConfig": "Configuração Personalizada",
+    "skills": "Habilidades",
+    "selectSkills": "Selecionar habilidades",
+    "tools": "Ferramentas",
+    "selectTools": "Selecionar ferramentas",
+    "allTools": "Todas as ferramentas",
+    "mcpServers": "Servidores MCP",
+    "selectMcpServers": "Selecionar servidores MCP",
+    "maxTurns": "Turnos Máximos",
+    "systemPrompt": "Prompt do Sistema",
+    "systemPromptPlaceholder": "Prompt do sistema personalizado...",
+    "model": "Modelo",
+    "selectModel": "Selecionar modelo",
+    "executor": "Executor",
+    "executorLocal": "Local",
+    "executorDescription": "Selecionar ambiente de execução de código"
+  },
+  "files": {
+    "title": "Arquivos",
+    "upload": "Enviar arquivos",
+    "dragDrop": "Arraste e solte arquivos aqui",
+    "uploading": "Enviando...",
+    "uploaded": "{{count}} arquivo enviado",
+    "uploaded_other": "{{count}} arquivos enviados",
+    "remove": "Remover arquivo",
+    "maxSize": "Tamanho máximo de arquivo: {{size}}",
+    "invalidType": "Tipo de arquivo inválido"
+  },
+  "output": {
+    "title": "Arquivos de Saída",
+    "download": "Baixar",
+    "downloadAll": "Baixar tudo",
+    "noFiles": "Sem arquivos de saída"
+  },
+  "toolCall": {
+    "title": "Chamada de Ferramenta",
+    "name": "Ferramenta",
+    "arguments": "Argumentos",
+    "result": "Resultado",
+    "error": "Erro",
+    "duration": "Duração",
+    "expand": "Expandir",
+    "collapse": "Recolher"
+  },
+  "error": {
+    "sendFailed": "Falha ao enviar mensagem",
+    "connectionLost": "Conexão perdida",
+    "tryAgain": "Tentar novamente"
+  },
+  "history": {
+    "title": "Histórico",
+    "empty": "Nenhuma mensagem ainda",
+    "loadMore": "Carregar mais"
+  },
+  "role": {
+    "user": "Você",
+    "assistant": "Assistente",
+    "system": "Sistema"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "title": "环境变量",
+  "description": "管理系统的环境变量",
+  "configStatus": "配置状态",
+  "variablesInEnv": ".env 中的变量",
+  "configFile": "配置文件",
+  "customEnvVars": "自定义环境变量",
+  "customEnvVarsDescription": "用户自定义的配置变量。",
+  "presetEnvVars": "预设环境变量",
+  "presetEnvVarsDescription": "来自 .env 文件的 API 密钥、令牌和其他敏感凭据。",
+  "noPresetConfigured": "未配置 API 密钥",
+  "noEnvConfigured": "未配置环境变量",
+  "noEnvConfiguredHelp": "点击「添加变量」创建第一个变量",
+  "failedToLoad": "加载配置失败",
+  "apiServerCheck": "请确保 API 服务器正在运行",
+  "sensitive": "敏感",
+  "sensitiveWarning": "这看起来是敏感值，将被掩码显示",
+  "leaveEmptyToKeep": "留空以保持当前值",
+  "varNameHelp": "使用大写字母、数字和下划线",
+  "env": {
+    "title": "环境变量",
+    "description": "配置 API 密钥和系统设置",
+    "searchPlaceholder": "搜索变量...",
+    "key": "键",
+    "value": "值",
+    "source": "来源",
+    "sources": {
+      "env": "环境",
+      "dotenv": ".env 文件",
+      "runtime": "运行时"
+    },
+    "empty": "暂无环境变量",
+    "emptyDescription": "添加环境变量以配置系统",
+    "masked": "••••••••",
+    "showValue": "显示值",
+    "hideValue": "隐藏值"
+  },
+  "add": {
+    "title": "添加变量",
+    "key": "变量名称",
+    "keyPlaceholder": "MY_API_KEY",
+    "keyHelp": "使用大写字母和下划线",
+    "value": "值",
+    "valuePlaceholder": "输入值...",
+    "adding": "添加中...",
+    "success": "变量添加成功",
+    "error": "添加变量失败"
+  },
+  "edit": {
+    "title": "编辑变量",
+    "saving": "保存中...",
+    "success": "变量更新成功",
+    "error": "更新变量失败"
+  },
+  "delete": {
+    "title": "删除变量",
+    "confirm": "确定要删除 \"{{key}}\" 吗？",
+    "description": "这可能会影响系统功能。",
+    "deleting": "删除中...",
+    "success": "变量删除成功",
+    "error": "删除变量失败"
+  },
+  "system": {
+    "title": "系统",
+    "export": "导出系统数据",
+    "exportDescription": "将所有技能和代理导出为 ZIP 文件",
+    "exporting": "导出中...",
+    "exportSuccess": "系统数据导出成功",
+    "exportError": "导出系统数据失败",
+    "import": "导入系统数据",
+    "importDescription": "从 ZIP 文件导入技能和代理",
+    "importing": "导入中...",
+    "importSuccess": "系统数据导入成功",
+    "importError": "导入系统数据失败"
+  },
+  "about": {
+    "title": "关于",
+    "version": "版本",
+    "documentation": "文档",
+    "github": "GitHub",
+    "license": "许可证"
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "mcpServers": {
+    "git": {
+      "name": "Git",
+      "description": "Git repository operations. Read, search, and manipulate Git repositories for version control tasks.",
+      "command": "uvx",
+      "args": ["mcp-server-git"],
+      "env": {},
+      "defaultEnabled": true,
+      "tools": [
+        {
+          "name": "git_status",
+          "description": "Shows the working tree status of a Git repository",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              }
+            },
+            "required": ["repo_path"]
+          }
+        },
+        {
+          "name": "git_diff_unstaged",
+          "description": "Shows changes in working directory not yet staged",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              },
+              "context_lines": {
+                "type": "number",
+                "description": "Number of context lines to show (default: 3)",
+                "default": 3
+              }
+            },
+            "required": ["repo_path"]
+          }
+        },
+        {
+          "name": "git_diff_staged",
+          "description": "Shows changes that are staged for commit",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              },
+              "context_lines": {
+                "type": "number",
+                "description": "Number of context lines to show (default: 3)",
+                "default": 3
+              }
+            },
+            "required": ["repo_path"]
+          }
+        },
+        {
+          "name": "git_diff",
+          "description": "Shows differences between branches or commits",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              },
+              "target": {
+                "type": "string",
+                "description": "Target branch or commit to compare with"
+              },
+              "context_lines": {
+                "type": "number",
+                "description": "Number of context lines to show (default: 3)",
+                "default": 3
+              }
+            },
+            "required": ["repo_path", "target"]
+          }
+        },
+        {
+          "name": "git_commit",
+          "description": "Records changes to the repository",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              },
+              "message": {
+                "type": "string",
+                "description": "Commit message"
+              }
+            },
+            "required": ["repo_path", "message"]
+          }
+        },
+        {
+          "name": "git_add",
+          "description": "Adds file contents to the staging area",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              },
+              "files": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "Array of file paths to stage"
+              }
+            },
+            "required": ["repo_path", "files"]
+          }
+        },
+        {
+          "name": "git_reset",
+          "description": "Unstages all staged changes",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              }
+            },
+            "required": ["repo_path"]
+          }
+        },
+        {
+          "name": "git_log",
+          "description": "Shows the commit logs with optional date filtering",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              },
+              "max_count": {
+                "type": "number",
+                "description": "Maximum number of commits to show (default: 10)",
+                "default": 10
+              },
+              "start_timestamp": {
+                "type": "string",
+                "description": "Start timestamp for filtering commits (ISO 8601, relative dates, or absolute dates)"
+              },
+              "end_timestamp": {
+                "type": "string",
+                "description": "End timestamp for filtering commits (ISO 8601, relative dates, or absolute dates)"
+              }
+            },
+            "required": ["repo_path"]
+          }
+        },
+        {
+          "name": "git_create_branch",
+          "description": "Creates a new branch",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              },
+              "branch_name": {
+                "type": "string",
+                "description": "Name of the new branch"
+              },
+              "base_branch": {
+                "type": "string",
+                "description": "Base branch to create from (defaults to current branch)"
+              }
+            },
+            "required": ["repo_path", "branch_name"]
+          }
+        },
+        {
+          "name": "git_checkout",
+          "description": "Switches branches",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              },
+              "branch_name": {
+                "type": "string",
+                "description": "Name of branch to checkout"
+              }
+            },
+            "required": ["repo_path", "branch_name"]
+          }
+        },
+        {
+          "name": "git_show",
+          "description": "Shows the contents of a commit",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to Git repository"
+              },
+              "revision": {
+                "type": "string",
+                "description": "The revision (commit hash, branch name, tag) to show"
+              }
+            },
+            "required": ["repo_path", "revision"]
+          }
+        },
+        {
+          "name": "git_branch",
+          "description": "List Git branches",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "repo_path": {
+                "type": "string",
+                "description": "Path to the Git repository"
+              },
+              "branch_type": {
+                "type": "string",
+                "description": "Whether to list 'local', 'remote', or 'all' branches",
+                "enum": ["local", "remote", "all"],
+                "default": "local"
+              },
+              "contains": {
+                "type": "string",
+                "description": "Only show branches containing this commit sha"
+              },
+              "not_contains": {
+                "type": "string",
+                "description": "Only show branches NOT containing this commit sha"
+              }
+            },
+            "required": ["repo_path", "branch_type"]
+          }
+        }
+      ]
+    },
+    "time": {
+      "name": "Time",
+      "description": "Get current time and perform timezone conversions. Useful for time-sensitive tasks.",
+      "command": "uvx",
+      "args": ["mcp-server-time"],
+      "env": {},
+      "defaultEnabled": true,
+      "tools": [
+        {
+          "name": "get_current_time",
+          "description": "Get the current time in a specific timezone or UTC.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "timezone": {
+                "type": "string",
+                "description": "IANA timezone name (e.g., 'America/New_York', 'Asia/Shanghai'). Defaults to UTC.",
+                "default": "UTC"
+              }
+            },
+            "required": []
+          }
+        },
+        {
+          "name": "convert_time",
+          "description": "Convert time between timezones.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "source_timezone": {
+                "type": "string",
+                "description": "Source IANA timezone name"
+              },
+              "time": {
+                "type": "string",
+                "description": "Time to convert in 24-hour format (HH:MM)"
+              },
+              "target_timezone": {
+                "type": "string",
+                "description": "Target IANA timezone name"
+              }
+            },
+            "required": ["source_timezone", "time", "target_timezone"]
+          }
+        }
+      ]
+    },
+    "tavily": {
+      "name": "Tavily Search",
+      "description": "AI-optimized web search and content extraction. Use for searching latest news, articles, and extracting web content.",
+      "command": "npx",
+      "args": ["-y", "tavily-mcp@latest"],
+      "env": {
+        "TAVILY_API_KEY": "${TAVILY_API_KEY}"
+      },
+      "defaultEnabled": true,
+      "tools": [
+        {
+          "name": "tavily_search",
+          "description": "A real-time web search tool powered by Tavily's AI engine. Features include customizable search depth, domain filtering, time-based filtering, and support for both general and news-specific searches.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "query": {
+                "type": "string",
+                "description": "The search query"
+              },
+              "search_depth": {
+                "type": "string",
+                "enum": ["basic", "advanced"],
+                "description": "Search depth: 'basic' for fast results, 'advanced' for more comprehensive search",
+                "default": "basic"
+              },
+              "max_results": {
+                "type": "integer",
+                "description": "Maximum number of results to return (1-10)",
+                "default": 5
+              },
+              "include_domains": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "List of domains to specifically include in search"
+              },
+              "exclude_domains": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "List of domains to exclude from search"
+              }
+            },
+            "required": ["query"]
+          }
+        },
+        {
+          "name": "tavily_extract",
+          "description": "Extracts and processes content from specified URLs with advanced parsing capabilities. Supports both basic and advanced extraction modes.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "urls": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "List of URLs to extract content from"
+              }
+            },
+            "required": ["urls"]
+          }
+        },
+        {
+          "name": "tavily_crawl",
+          "description": "A web crawler that systematically explores websites starting from a base URL. Features configurable depth and breadth limits, domain filtering, and path pattern matching.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "description": "The base URL to start crawling from"
+              },
+              "max_depth": {
+                "type": "integer",
+                "description": "Maximum depth to crawl",
+                "default": 2
+              },
+              "max_pages": {
+                "type": "integer",
+                "description": "Maximum number of pages to crawl",
+                "default": 10
+              }
+            },
+            "required": ["url"]
+          }
+        }
+      ]
+    },
+    "fetch": {
+      "name": "Fetch",
+      "description": "Fetches a URL from the internet and extracts its contents as markdown",
+      "command": "uvx",
+      "args": ["mcp-server-fetch"],
+      "env": {},
+      "defaultEnabled": true,
+      "tools": [
+        {
+          "name": "fetch",
+          "description": "Fetches a URL from the internet and optionally extracts its contents as markdown.",
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL to fetch"
+              },
+              "max_length": {
+                "type": "integer",
+                "default": 5000,
+                "description": "Maximum number of characters to return."
+              },
+              "start_index": {
+                "type": "integer",
+                "default": 0,
+                "description": "On return output starting at this character index, useful if a previous fetch was truncated and more context is required."
+              },
+              "raw": {
+                "type": "boolean",
+                "default": false,
+                "description": "Get the actual HTML content of the requested page, without simplification."
+              }
+            },
+            "required": ["url"]
+          }
+        }
+      ]
+    }
+  }
+}

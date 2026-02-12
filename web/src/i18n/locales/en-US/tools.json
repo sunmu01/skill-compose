@@ -1,0 +1,70 @@
+{
+  "title": "Built-in Tools",
+  "description": "Core tools always available to the Agent",
+  "availableTools": "Available Tools",
+  "builtinInfo": "Built-in tools are core capabilities with Python implementations. They cannot be modified through the UI.",
+  "toolsCount": "{{count}} tools",
+  "list": {
+    "title": "Tools Discovery",
+    "searchPlaceholder": "Search tools...",
+    "filterByCategory": "Filter by category",
+    "filterBySource": "Filter by source",
+    "allCategories": "All categories",
+    "allSources": "All sources",
+    "empty": "No tools available",
+    "emptyDescription": "No tools match your search criteria"
+  },
+  "categoryLabels": {
+    "skill_management": "Skill Management",
+    "code_execution": "Code Execution",
+    "code_exploration": "Code Exploration",
+    "output": "Output Management"
+  },
+  "categoryDescriptions": {
+    "skill_management": "Tools for discovering and reading skills",
+    "code_execution": "Tools for running code and commands",
+    "code_exploration": "Tools for searching and reading source code",
+    "output": "Tools for reporting and managing output files"
+  },
+  "card": {
+    "category": "Category",
+    "source": "Source",
+    "parameters": "{{count}} parameter",
+    "parameters_other": "{{count}} parameters"
+  },
+  "detail": {
+    "description": "Description",
+    "category": "Category",
+    "source": "Source",
+    "parameters": "Parameters",
+    "required": "Required",
+    "optional": "Optional",
+    "type": "Type",
+    "default": "Default",
+    "noParameters": "No parameters"
+  },
+  "categories": {
+    "all": "All",
+    "builtin": "Built-in",
+    "mcp": "MCP",
+    "skill": "Skill",
+    "code": "Code Execution",
+    "file": "File Operations",
+    "web": "Web",
+    "search": "Search"
+  },
+  "sources": {
+    "builtin": "Built-in",
+    "mcp": "MCP Server",
+    "skill": "Skill"
+  },
+  "kernel": {
+    "title": "Code Kernel",
+    "reset": "Reset Kernel",
+    "resetting": "Resetting...",
+    "resetSuccess": "Kernel reset successfully",
+    "resetError": "Failed to reset kernel",
+    "resetConfirm": "Reset the code execution kernel?",
+    "resetDescription": "This will clear all variables and state from the code executor."
+  }
+}

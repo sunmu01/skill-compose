@@ -1,0 +1,243 @@
+"""
+Tests for the Agent run endpoint.
+
+Covers:
+- POST /api/v1/agent/run (synchronous agent execution)
+- Various request parameters: skills, max_turns, history, files, mcp_servers
+- Success and failure scenarios
+- Trace saving after execution
+"""
+
+from dataclasses import dataclass, field
+from typing import Dict, List, Optional
+from unittest.mock import MagicMock, patch
+
+import pytest
+from httpx import AsyncClient
+
+
+# ---------------------------------------------------------------------------
+# Mock dataclasses matching app.agent.agent (AgentStep, LLMCall, AgentResult)
+# ---------------------------------------------------------------------------
+
+
+@dataclass
+class MockStep:
+    role: str = "assistant"
+    content: str = "Mock answer"
+    tool_name: Optional[str] = None
+    tool_input: Optional[Dict] = None
+    tool_result: Optional[str] = None
+
+
+@dataclass
+class MockLLMCall:
+    turn: int = 1
+    timestamp: str = "2024-01-01T00:00:00"
+    model: str = "kimi-k2.5"
+    request_messages: List[Dict] = field(default_factory=list)
+    response_content: List[Dict] = field(default_factory=list)
+    stop_reason: str = "end_turn"
+    input_tokens: int = 100
+    output_tokens: int = 50
+
+
+@dataclass
+class MockAgentResult:
+    success: bool = True
+    answer: str = "Mock answer"
+    total_turns: int = 1
+    total_input_tokens: int = 100
+    total_output_tokens: int = 50
+    steps: List = field(default_factory=lambda: [MockStep()])
+    llm_calls: List = field(default_factory=lambda: [MockLLMCall()])
+    error: Optional[str] = None
+    log_file: Optional[str] = None
+    output_files: List = field(default_factory=list)
+    skills_used: List = field(default_factory=list)
+
+
+# ---------------------------------------------------------------------------
+# Helper to build a mock SkillsAgent instance
+# ---------------------------------------------------------------------------
+
+
+def _make_mock_agent(result: Optional[MockAgentResult] = None):
+    """Return a MagicMock that behaves like SkillsAgent."""
+    instance = MagicMock()
+    instance.run.return_value = result or MockAgentResult()
+    instance.model = "kimi-k2.5"
+    instance.model_provider = "kimi"
+    return instance
+
+
+# ---------------------------------------------------------------------------
+# Tests
+# ---------------------------------------------------------------------------
+
+
+@patch("app.api.v1.agent.SkillsAgent")
+async def test_agent_run_simple(MockAgent, client: AsyncClient):
+    """POST /agent/run with a simple request returns 200 with success=True."""
+    MockAgent.return_value = _make_mock_agent()
+
+    response = await client.post(
+        "/api/v1/agent/run",
+        json={"request": "Hello, what can you do?"},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["success"] is True
+    assert body["answer"] == "Mock answer"
+    assert body["total_turns"] == 1
+    assert len(body["steps"]) >= 1
+
+
+@patch("app.api.v1.agent.SkillsAgent")
+async def test_agent_run_with_skills(MockAgent, client: AsyncClient):
+    """POST /agent/run with skills parameter passes skills to agent."""
+    MockAgent.return_value = _make_mock_agent()
+
+    response = await client.post(
+        "/api/v1/agent/run",
+        json={"request": "Analyze this", "skills": ["test-skill"]},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["success"] is True
+    # Verify SkillsAgent was constructed with the skills
+    MockAgent.assert_called_once()
+    call_kwargs = MockAgent.call_args[1]
+    assert call_kwargs["allowed_skills"] == ["test-skill"]
+
+
+@patch("app.api.v1.agent.SkillsAgent")
+async def test_agent_run_with_max_turns(MockAgent, client: AsyncClient):
+    """POST /agent/run with max_turns passes the value to agent."""
+    MockAgent.return_value = _make_mock_agent()
+
+    response = await client.post(
+        "/api/v1/agent/run",
+        json={"request": "Quick task", "max_turns": 5},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["success"] is True
+    call_kwargs = MockAgent.call_args[1]
+    assert call_kwargs["max_turns"] == 5
+
+
+@patch("app.api.v1.agent.SkillsAgent")
+async def test_agent_run_with_history(MockAgent, client: AsyncClient):
+    """POST /agent/run with conversation_history sends history to agent."""
+    MockAgent.return_value = _make_mock_agent()
+
+    history = [
+        {"role": "user", "content": "Hi"},
+        {"role": "assistant", "content": "Hello!"},
+    ]
+
+    response = await client.post(
+        "/api/v1/agent/run",
+        json={"request": "Continue our chat", "conversation_history": history},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["success"] is True
+    # Verify run() was called with conversation_history
+    run_call = MockAgent.return_value.run
+    run_call.assert_called_once()
+    _, run_kwargs = run_call.call_args
+    assert run_kwargs["conversation_history"] == history
+
+
+@patch("app.api.v1.agent.SkillsAgent")
+async def test_agent_run_with_files(MockAgent, client: AsyncClient):
+    """POST /agent/run with uploaded_files appends file info to request."""
+    MockAgent.return_value = _make_mock_agent()
+
+    files = [
+        {
+            "file_id": "abc123",
+            "filename": "report.pdf",
+            "path": "/tmp/uploads/report.pdf",
+            "content_type": "application/pdf",
+        }
+    ]
+
+    response = await client.post(
+        "/api/v1/agent/run",
+        json={"request": "Summarize this file", "uploaded_files": files},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["success"] is True
+    # The actual_request passed to agent.run should contain the file info
+    run_call = MockAgent.return_value.run
+    actual_request = run_call.call_args[0][0]
+    assert "report.pdf" in actual_request
+    assert "/tmp/uploads/report.pdf" in actual_request
+
+
+@patch("app.api.v1.agent.SkillsAgent")
+async def test_agent_run_failure(MockAgent, client: AsyncClient):
+    """POST /agent/run when agent fails returns 200 with success=False."""
+    failed_result = MockAgentResult(
+        success=False,
+        answer="",
+        error="Something went wrong",
+        steps=[MockStep(role="assistant", content="Error occurred")],
+    )
+    MockAgent.return_value = _make_mock_agent(failed_result)
+
+    response = await client.post(
+        "/api/v1/agent/run",
+        json={"request": "Do something impossible"},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["success"] is False
+    assert body["error"] == "Something went wrong"
+
+
+@patch("app.api.v1.agent.SkillsAgent")
+async def test_agent_run_saves_trace(MockAgent, client: AsyncClient):
+    """POST /agent/run saves an execution trace and returns trace_id."""
+    MockAgent.return_value = _make_mock_agent()
+
+    response = await client.post(
+        "/api/v1/agent/run",
+        json={"request": "Test trace saving"},
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["trace_id"] is not None
+    assert isinstance(body["trace_id"], str)
+    assert len(body["trace_id"]) > 0
+
+
+@patch("app.api.v1.agent.SkillsAgent")
+async def test_agent_run_with_mcp_servers(MockAgent, client: AsyncClient):
+    """POST /agent/run with equipped_mcp_servers passes them to agent."""
+    MockAgent.return_value = _make_mock_agent()
+
+    response = await client.post(
+        "/api/v1/agent/run",
+        json={
+            "request": "Fetch a webpage",
+            "equipped_mcp_servers": ["fetch"],
+        },
+    )
+
+    assert response.status_code == 200
+    body = response.json()
+    assert body["success"] is True
+    call_kwargs = MockAgent.call_args[1]
+    assert call_kwargs["equipped_mcp_servers"] == ["fetch"]

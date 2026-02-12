@@ -1,0 +1,99 @@
+{
+  "title": "Trazas de Ejecución",
+  "description": "Ver historial de ejecución del agente para depuración y análisis",
+  "exportAll": "Exportar Todo",
+  "backToSkills": "Volver a Habilidades",
+  "filterPlaceholder": "Filtrar por estado",
+  "all": "Todos",
+  "success": "Éxito",
+  "failed": "Fallido",
+  "turns": "{{count}} turnos",
+  "tokens": "{{count}} tokens",
+  "showing": "Mostrando {{from}}–{{to}} de {{total}} trazas",
+  "showingAll": "Mostrando {{count}} de {{total}} trazas",
+  "page": "Página {{current}} / {{total}}",
+  "list": {
+    "title": "Trazas de Ejecución",
+    "searchPlaceholder": "Buscar trazas...",
+    "filterByStatus": "Filtrar por estado",
+    "filterBySkill": "Filtrar por habilidad",
+    "allStatuses": "Todos los estados",
+    "allSkills": "Todas las habilidades",
+    "empty": "No se encontraron trazas de ejecución",
+    "emptyDescription": "Ejecuta el agente para generar trazas"
+  },
+  "card": {
+    "request": "Solicitud",
+    "response": "Respuesta",
+    "duration": "Duración",
+    "turns": "{{count}} turno",
+    "turns_other": "{{count}} turnos",
+    "tokens": "{{count}} token",
+    "tokens_other": "{{count}} tokens",
+    "skills": "Habilidades usadas",
+    "tools": "Herramientas llamadas"
+  },
+  "detail": {
+    "title": "Detalle de Traza",
+    "overview": "Resumen",
+    "steps": "Pasos",
+    "request": "Solicitud",
+    "response": "Respuesta",
+    "answer": "Respuesta",
+    "error": "Error",
+    "skillsUsed": "Habilidades Usadas",
+    "metadata": "Metadatos",
+    "backToTraces": "Trazas",
+    "loadError": "Error al cargar la traza",
+    "turnsCount": "{{count}} turnos",
+    "tokenStats": "{{input}} entrada / {{output}} salida tokens"
+  },
+  "overview": {
+    "traceId": "ID de Traza",
+    "status": "Estado",
+    "startedAt": "Iniciado",
+    "completedAt": "Completado",
+    "duration": "Duración",
+    "turns": "Turnos",
+    "inputTokens": "Tokens de Entrada",
+    "outputTokens": "Tokens de Salida",
+    "totalTokens": "Tokens Totales",
+    "skillsUsed": "Habilidades Usadas",
+    "toolsCalled": "Herramientas Llamadas",
+    "error": "Error"
+  },
+  "steps": {
+    "title": "Pasos de Ejecución",
+    "titleWithCount": "Pasos de Ejecución ({{count}})",
+    "step": "Paso {{number}}",
+    "toolCall": "Llamada de Herramienta",
+    "toolResult": "Resultado de Herramienta",
+    "input": "Entrada",
+    "output": "Salida",
+    "result": "Resultado",
+    "message": "Mensaje",
+    "thinking": "Pensando",
+    "empty": "Sin pasos registrados"
+  },
+  "status": {
+    "pending": "Pendiente",
+    "running": "Ejecutando",
+    "completed": "Completado",
+    "failed": "Fallido",
+    "cancelled": "Cancelado"
+  },
+  "delete": {
+    "title": "Eliminar Traza",
+    "confirm": "¿Está seguro de que desea eliminar esta traza?",
+    "description": "Esta acción no se puede deshacer.",
+    "deleting": "Eliminando...",
+    "success": "Traza eliminada exitosamente",
+    "error": "Error al eliminar la traza"
+  },
+  "export": {
+    "title": "Exportar Traza",
+    "asJson": "Exportar como JSON",
+    "success": "Traza exportada exitosamente",
+    "error": "Error al exportar la traza"
+  }
+}

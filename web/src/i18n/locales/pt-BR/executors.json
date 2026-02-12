@@ -1,0 +1,16 @@
+{
+  "title": "Executores",
+  "description": "Visualize os ambientes de execução de código e seu status",
+  "builtinExecutors": "Executores Integrados",
+  "noExecutors": "Sem Executores",
+  "noExecutorsDescription": "Nenhum ambiente de execução configurado.",
+  "total": "Total: {{count}} executores",
+  "refresh": "Atualizar",
+  "lastUpdated": "Atualizado {{time}}",
+  "failedToLoad": "Falha ao carregar executores",
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "error": "Erro"
+  }
+}

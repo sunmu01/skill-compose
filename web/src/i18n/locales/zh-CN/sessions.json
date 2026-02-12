@@ -1,0 +1,40 @@
+{
+  "title": "会话",
+  "description": "查看和管理已发布代理的聊天会话",
+  "empty": "暂无会话",
+  "emptyDescription": "与已发布的代理聊天以创建会话",
+  "filters": {
+    "allAgents": "所有代理",
+    "byAgent": "按代理筛选"
+  },
+  "card": {
+    "messageCount": "{{count}} 条消息",
+    "firstMessage": "首条消息",
+    "created": "创建时间",
+    "lastActive": "最近活跃",
+    "noMessage": "空会话"
+  },
+  "delete": {
+    "title": "删除会话",
+    "confirm": "确定要删除此会话吗？此操作不可撤销。",
+    "success": "会话已删除",
+    "error": "删除会话失败"
+  },
+  "deleteAll": {
+    "title": "删除所有会话",
+    "confirm": "确定要删除该代理的所有会话吗？",
+    "success": "所有会话已删除",
+    "error": "删除会话失败"
+  },
+  "detail": {
+    "title": "会话详情",
+    "user": "用户",
+    "assistant": "助手",
+    "noMessages": "此会话暂无消息"
+  },
+  "pagination": {
+    "showing": "显示第 {{from}}–{{to}} 条，共 {{total}} 条会话",
+    "page": "第 {{current}} / {{total}} 页",
+    "showingAll": "显示 {{count}} / {{total}} 条会话"
+  }
+}

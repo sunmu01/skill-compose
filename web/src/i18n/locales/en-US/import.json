@@ -1,0 +1,77 @@
+{
+  "title": "Import Skill",
+  "description": "Import a skill from a file or GitHub repository",
+  "backToSkills": "Back to Skills",
+  "tabs": {
+    "github": "From GitHub",
+    "file": "Upload File",
+    "folder": "Upload Folder"
+  },
+  "github": {
+    "title": "Import from GitHub",
+    "description": "Enter a GitHub URL pointing to a skill directory containing SKILL.md",
+    "urlLabel": "GitHub URL",
+    "placeholder": "https://github.com/owner/repo/tree/branch/path/to/skill",
+    "examples": "Examples: https://github.com/owner/skill-name or https://github.com/owner/repo/tree/main/skills/my-skill",
+    "button": "Import from GitHub",
+    "hints": {
+      "httpsRequired": "URL must start with https://",
+      "githubRequired": "URL must be a GitHub URL (github.com)",
+      "useHttps": "Use https:// instead of http://",
+      "ownerRepoRequired": "URL must include owner and repository: github.com/owner/repo",
+      "treeFormat": "Use /tree/branch/path format for subdirectories",
+      "branchRequired": "Branch name is required after /tree/",
+      "expectedFormat": "Expected format: https://github.com/owner/repo or https://github.com/owner/repo/tree/branch/path"
+    }
+  },
+  "file": {
+    "title": "Upload Skill File",
+    "description": "Drag and drop a .skill or .zip file, or click to browse.",
+    "dropHere": "Drop .skill or .zip file here",
+    "orClickToBrowse": "or click to browse",
+    "invalidFile": "Please select a .skill or .zip file",
+    "button": "Import Skill"
+  },
+  "folder": {
+    "title": "Upload Skill Folder",
+    "description": "Drag and drop a folder containing SKILL.md, or click to browse.",
+    "dropHere": "Drop a skill folder here",
+    "orClickToBrowse": "or click to browse",
+    "filesCount": "{{count}} files",
+    "button": "Import Skill",
+    "errors": {
+      "cannotRead": "Could not read the dropped item",
+      "notFolder": "Please drop a folder, not a file. Use the 'Upload File' tab for .skill/.zip files.",
+      "noSkillMd": "Folder must contain a SKILL.md file at the root level",
+      "readFailed": "Failed to read folder contents"
+    }
+  },
+  "status": {
+    "importing": "Importing...",
+    "importFailed": "Import Failed",
+    "importSuccess": "Import Successful!",
+    "viewSkill": "View Skill →",
+    "importAnother": "Import Another",
+    "genericError": "Import failed",
+    "githubError": "GitHub import failed",
+    "skippedFiles": "{{count}} file(s) skipped (unsupported types: compiled artifacts like .exe, .dll, .so)",
+    "skippedFilesList": "Skipped: {{files}}"
+  },
+  "about": {
+    "title": "About Skill Import",
+    "description": "A skill can be imported from a <code>.skill</code>/<code>.zip</code> file, a folder, or a GitHub repository. The structure must contain:",
+    "skillMd": "<strong>SKILL.md</strong> - The skill definition document (required)",
+    "scripts": "<strong>scripts/</strong> - Python scripts and utilities",
+    "references": "<strong>references/</strong> - Reference documentation",
+    "assets": "<strong>assets/</strong> - Images and other assets",
+    "schema": "<strong>schema.json</strong> - Input/output schema (optional)",
+    "conflictNote": "If a skill with the same name already exists, you can choose to create a copy with a new name."
+  },
+  "conflict": {
+    "title": "Skill Already Exists",
+    "description": "A skill named <strong>{{name}}</strong> already exists (current version: v{{version}}).",
+    "question": "What would you like to do?",
+    "creating": "Creating...",
+    "createCopy": "Create Copy"
+  }
+}

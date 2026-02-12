@@ -1,0 +1,47 @@
+{
+  "title": "Backup e Restauração",
+  "description": "Crie backups completos do sistema e restaure a partir de snapshots anteriores. Os backups incluem todos os dados do banco de dados e arquivos do disco.",
+  "create": {
+    "title": "Criar Backup",
+    "description": "Exporte todas as habilidades, agentes, rastreamentos, sessões e arquivos do disco em um arquivo ZIP para download.",
+    "button": "Criar Backup",
+    "creating": "Criando backup...",
+    "success": "Backup criado com sucesso",
+    "error": "Falha ao criar backup",
+    "includeEnv": "Incluir arquivo .env",
+    "includeEnvWarning": "O arquivo .env pode conter chaves de API e segredos. Inclua apenas em backups privados."
+  },
+  "restore": {
+    "title": "Restaurar de Backup",
+    "description": "Envie um arquivo ZIP de backup para restaurar todos os dados. Isso substituirá TODOS os dados existentes.",
+    "button": "Restaurar",
+    "restoring": "Restaurando...",
+    "success": "Sistema restaurado com sucesso",
+    "error": "Falha ao restaurar backup",
+    "confirmTitle": "Confirmar Restauração",
+    "confirmWarning": "Isso EXCLUIRÁ todos os dados existentes e os substituirá pelo conteúdo do backup. Esta ação não pode ser desfeita.",
+    "confirmMessage": "Todas as habilidades, agentes, rastreamentos e sessões atuais serão permanentemente removidos e substituídos. Um snapshot de segurança do estado atual será criado automaticamente antes da restauração.",
+    "confirmButton": "Sim, Restaurar",
+    "snapshot": "Snapshot pré-restauração salvo como:",
+    "dragDrop": "Arraste e solte um arquivo ZIP de backup aqui",
+    "orClickToBrowse": "ou clique em qualquer lugar para navegar",
+    "selectFile": "Escolher arquivo .zip"
+  },
+  "list": {
+    "title": "Backups Disponíveis",
+    "empty": "Nenhum backup encontrado",
+    "emptyDescription": "Crie seu primeiro backup para começar.",
+    "filename": "Nome do arquivo",
+    "size": "Tamanho",
+    "createdAt": "Criado em",
+    "restoreFrom": "Restaurar",
+    "download": "Baixar"
+  },
+  "stats": {
+    "skills": "Habilidades",
+    "skillVersions": "Versões",
+    "agents": "Agentes",
+    "traces": "Rastreamentos",
+    "sessions": "Sessões"
+  }
+}

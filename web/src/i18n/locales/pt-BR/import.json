@@ -1,0 +1,77 @@
+{
+  "title": "Importar Skill",
+  "description": "Importar um skill de um arquivo ou repositório do GitHub",
+  "backToSkills": "Voltar para Skills",
+  "tabs": {
+    "github": "Do GitHub",
+    "file": "Enviar Arquivo",
+    "folder": "Enviar Pasta"
+  },
+  "github": {
+    "title": "Importar do GitHub",
+    "description": "Insira uma URL do GitHub apontando para um diretório de skill contendo SKILL.md",
+    "urlLabel": "URL do GitHub",
+    "placeholder": "https://github.com/owner/repo/tree/branch/path/to/skill",
+    "examples": "Exemplos: https://github.com/owner/skill-name ou https://github.com/owner/repo/tree/main/skills/my-skill",
+    "button": "Importar do GitHub",
+    "hints": {
+      "httpsRequired": "A URL deve começar com https://",
+      "githubRequired": "A URL deve ser do GitHub (github.com)",
+      "useHttps": "Use https:// em vez de http://",
+      "ownerRepoRequired": "A URL deve incluir proprietário e repositório: github.com/owner/repo",
+      "treeFormat": "Use o formato /tree/branch/path para subdiretórios",
+      "branchRequired": "O nome do branch é obrigatório após /tree/",
+      "expectedFormat": "Formato esperado: https://github.com/owner/repo ou https://github.com/owner/repo/tree/branch/path"
+    }
+  },
+  "file": {
+    "title": "Enviar Arquivo de Skill",
+    "description": "Arraste e solte um arquivo .skill ou .zip, ou clique para procurar.",
+    "dropHere": "Solte o arquivo .skill ou .zip aqui",
+    "orClickToBrowse": "ou clique para procurar",
+    "invalidFile": "Selecione um arquivo .skill ou .zip",
+    "button": "Importar Skill"
+  },
+  "folder": {
+    "title": "Enviar Pasta de Skill",
+    "description": "Arraste e solte uma pasta contendo SKILL.md, ou clique para procurar.",
+    "dropHere": "Solte a pasta de skill aqui",
+    "orClickToBrowse": "ou clique para procurar",
+    "filesCount": "{{count}} arquivos",
+    "button": "Importar Skill",
+    "errors": {
+      "cannotRead": "Não foi possível ler o item solto",
+      "notFolder": "Solte uma pasta, não um arquivo. Use a aba 'Enviar Arquivo' para arquivos .skill/.zip.",
+      "noSkillMd": "A pasta deve conter um arquivo SKILL.md no nível raiz",
+      "readFailed": "Falha ao ler o conteúdo da pasta"
+    }
+  },
+  "status": {
+    "importing": "Importando...",
+    "importFailed": "Falha na Importação",
+    "importSuccess": "Importação Bem-sucedida!",
+    "viewSkill": "Ver Skill →",
+    "importAnother": "Importar Outro",
+    "genericError": "Falha na importação",
+    "githubError": "Falha na importação do GitHub",
+    "skippedFiles": "{{count}} arquivo(s) ignorado(s) (tipos não suportados: artefatos compilados como .exe, .dll, .so)",
+    "skippedFilesList": "Ignorados: {{files}}"
+  },
+  "about": {
+    "title": "Sobre a Importação de Skills",
+    "description": "Um skill pode ser importado de um arquivo <code>.skill</code>/<code>.zip</code>, uma pasta ou um repositório do GitHub. A estrutura deve conter:",
+    "skillMd": "<strong>SKILL.md</strong> - Documento de definição do skill (obrigatório)",
+    "scripts": "<strong>scripts/</strong> - Scripts e utilitários Python",
+    "references": "<strong>references/</strong> - Documentação de referência",
+    "assets": "<strong>assets/</strong> - Imagens e outros recursos",
+    "schema": "<strong>schema.json</strong> - Esquema de entrada/saída (opcional)",
+    "conflictNote": "Se um skill com o mesmo nome já existir, você pode escolher criar uma cópia com um novo nome."
+  },
+  "conflict": {
+    "title": "Skill Já Existe",
+    "description": "Já existe um skill chamado <strong>{{name}}</strong> (versão atual: v{{version}}).",
+    "question": "O que você gostaria de fazer?",
+    "creating": "Criando...",
+    "createCopy": "Criar Cópia"
+  }
+}

@@ -1,0 +1,38 @@
+[project]
+name = "skills-api"
+version = "1.0.0"
+description = "Skill Composer - Build autonomous AI agents with composable, evolvable skills"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "anthropic>=0.18.0",
+    "python-multipart>=0.0.6",
+    "aiofiles>=23.2.0",
+    "pyyaml>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.25.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+markers = [
+    "slow: Slow tests",
+    "e2e: End-to-end integration tests",
+    "e2e_llm: E2E tests requiring real LLM API calls",
+    "integration: Integration tests requiring real API keys",
+]

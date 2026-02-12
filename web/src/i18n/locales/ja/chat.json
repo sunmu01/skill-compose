@@ -1,0 +1,82 @@
+{
+  "title": "チャット",
+  "placeholder": "メッセージを入力...",
+  "send": "送信",
+  "stop": "停止",
+  "clear": "チャットをクリア",
+  "clearConfirm": "すべてのメッセージをクリアしますか？",
+  "clearDescription": "現在の会話からすべてのメッセージが削除されます。",
+  "newChat": "新規チャット",
+  "thinking": "考え中...",
+  "generating": "生成中...",
+  "openFullscreen": "新しいウィンドウで開く",
+  "reset": "リセット",
+  "home": "ホーム",
+  "config": "設定",
+  "startConversation": "会話を開始",
+  "typeMessageToBegin": "下にメッセージを入力してエージェントとのチャットを開始してください。",
+  "clickConfigToCustomize": "上の設定をクリックしてカスタマイズしてください。",
+  "configuration": {
+    "title": "設定",
+    "agent": "エージェント",
+    "selectAgent": "エージェントを選択",
+    "customConfig": "カスタム設定",
+    "skills": "スキル",
+    "selectSkills": "スキルを選択",
+    "tools": "ツール",
+    "selectTools": "ツールを選択",
+    "allTools": "すべてのツール",
+    "mcpServers": "MCPサーバー",
+    "selectMcpServers": "MCPサーバーを選択",
+    "maxTurns": "最大ターン数",
+    "systemPrompt": "システムプロンプト",
+    "systemPromptPlaceholder": "カスタムシステムプロンプト...",
+    "model": "モデル",
+    "selectModel": "モデルを選択",
+    "executor": "エグゼキューター",
+    "executorLocal": "ローカル",
+    "executorDescription": "コード実行環境を選択"
+  },
+  "files": {
+    "title": "ファイル",
+    "upload": "ファイルをアップロード",
+    "dragDrop": "ここにファイルをドラッグ＆ドロップ",
+    "uploading": "アップロード中...",
+    "uploaded": "{{count}} ファイルアップロード完了",
+    "uploaded_other": "{{count}} ファイルアップロード完了",
+    "remove": "ファイルを削除",
+    "maxSize": "最大ファイルサイズ: {{size}}",
+    "invalidType": "無効なファイルタイプ"
+  },
+  "output": {
+    "title": "出力ファイル",
+    "download": "ダウンロード",
+    "downloadAll": "すべてダウンロード",
+    "noFiles": "出力ファイルがありません"
+  },
+  "toolCall": {
+    "title": "ツール呼び出し",
+    "name": "ツール",
+    "arguments": "引数",
+    "result": "結果",
+    "error": "エラー",
+    "duration": "所要時間",
+    "expand": "展開",
+    "collapse": "折りたたむ"
+  },
+  "error": {
+    "sendFailed": "メッセージの送信に失敗しました",
+    "connectionLost": "接続が切断されました",
+    "tryAgain": "再試行"
+  },
+  "history": {
+    "title": "履歴",
+    "empty": "メッセージがありません",
+    "loadMore": "さらに読み込む"
+  },
+  "role": {
+    "user": "あなた",
+    "assistant": "アシスタント",
+    "system": "システム"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "skills": "スキル",
+    "agents": "エージェント",
+    "tools": "ツール",
+    "mcp": "MCP",
+    "traces": "トレース",
+    "files": "ファイル",
+    "settings": "設定",
+    "environment": "環境変数",
+    "executors": "エグゼキューター",
+    "backup": "バックアップ",
+    "terminal": "ターミナル",
+    "sessions": "セッション",
+    "more": "その他"
+  },
+  "actions": {
+    "add": "追加",
+    "create": "作成",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "update": "更新",
+    "close": "閉じる",
+    "confirm": "確認",
+    "apply": "適用",
+    "reset": "リセット",
+    "search": "検索",
+    "filter": "フィルター",
+    "sort": "並べ替え",
+    "export": "エクスポート",
+    "import": "インポート",
+    "download": "ダウンロード",
+    "upload": "アップロード",
+    "copy": "コピー",
+    "refresh": "更新",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "run": "実行",
+    "stop": "停止",
+    "retry": "再試行",
+    "clear": "クリア",
+    "selectAll": "すべて選択",
+    "deselectAll": "選択解除",
+    "view": "表示",
+    "preview": "プレビュー",
+    "loading": "読み込み中...",
+    "processing": "処理中..."
+  },
+  "status": {
+    "success": "成功",
+    "error": "エラー",
+    "warning": "警告",
+    "info": "情報",
+    "pending": "保留中",
+    "running": "実行中",
+    "completed": "完了",
+    "failed": "失敗",
+    "active": "アクティブ",
+    "inactive": "非アクティブ",
+    "enabled": "有効",
+    "disabled": "無効",
+    "published": "公開済み",
+    "unpublished": "未公開"
+  },
+  "time": {
+    "now": "たった今",
+    "minutesAgo": "{{count}}分前",
+    "minutesAgo_other": "{{count}}分前",
+    "hoursAgo": "{{count}}時間前",
+    "hoursAgo_other": "{{count}}時間前",
+    "daysAgo": "{{count}}日前",
+    "daysAgo_other": "{{count}}日前",
+    "today": "今日",
+    "yesterday": "昨日"
+  },
+  "validation": {
+    "required": "この項目は必須です",
+    "invalidEmail": "無効なメールアドレスです",
+    "minLength": "{{min}}文字以上必要です",
+    "maxLength": "{{max}}文字以内で入力してください",
+    "invalidUrl": "無効なURLです"
+  },
+  "empty": {
+    "noData": "データがありません",
+    "noResults": "結果が見つかりません",
+    "noItems": "項目がありません"
+  },
+  "errors": {
+    "generic": "エラーが発生しました",
+    "networkError": "ネットワークエラーです。再試行してください。",
+    "notFound": "見つかりません",
+    "unauthorized": "認証が必要です",
+    "forbidden": "アクセスが拒否されました",
+    "serverError": "サーバーエラー"
+  },
+  "confirm": {
+    "delete": "削除してもよろしいですか？",
+    "unsavedChanges": "保存されていない変更があります。このまま離れますか？"
+  },
+  "theme": {
+    "light": "ライト",
+    "dark": "ダーク",
+    "system": "システム"
+  },
+  "language": {
+    "select": "言語を選択",
+    "current": "言語"
+  },
+  "tooltips": {
+    "documentation": "ドキュメント",
+    "files": "ファイル",
+    "environment": "環境変数",
+    "toggleTheme": "テーマ切替",
+    "language": "言語",
+    "terminal": "ターミナル",
+    "discord": "Discordコミュニティ"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Backup & Restore",
+  "description": "Create full system backups and restore from previous snapshots. Backups include all database data and disk files.",
+  "create": {
+    "title": "Create Backup",
+    "description": "Export all skills, agents, traces, sessions, and disk files into a downloadable ZIP archive.",
+    "button": "Create Backup",
+    "creating": "Creating backup...",
+    "success": "Backup created successfully",
+    "error": "Failed to create backup",
+    "includeEnv": "Include .env file",
+    "includeEnvWarning": "The .env file may contain API keys and secrets. Only include it for private backups."
+  },
+  "restore": {
+    "title": "Restore from Backup",
+    "description": "Upload a backup ZIP file to restore all data. This will replace ALL existing data.",
+    "button": "Restore",
+    "restoring": "Restoring...",
+    "success": "System restored successfully",
+    "error": "Failed to restore backup",
+    "confirmTitle": "Confirm Restore",
+    "confirmWarning": "This will DELETE all existing data and replace it with the backup contents. This action cannot be undone.",
+    "confirmMessage": "All current skills, agents, traces, and sessions will be permanently removed and replaced. A safety snapshot of the current state will be created automatically before restoring.",
+    "confirmButton": "Yes, Restore",
+    "snapshot": "Pre-restore snapshot saved as:",
+    "dragDrop": "Drag and drop a backup ZIP file here",
+    "orClickToBrowse": "or click anywhere to browse",
+    "selectFile": "Choose .zip file"
+  },
+  "list": {
+    "title": "Available Backups",
+    "empty": "No backups found",
+    "emptyDescription": "Create your first backup to get started.",
+    "filename": "Filename",
+    "size": "Size",
+    "createdAt": "Created",
+    "restoreFrom": "Restore",
+    "download": "Download"
+  },
+  "stats": {
+    "skills": "Skills",
+    "skillVersions": "Versions",
+    "agents": "Agents",
+    "traces": "Traces",
+    "sessions": "Sessions"
+  }
+}

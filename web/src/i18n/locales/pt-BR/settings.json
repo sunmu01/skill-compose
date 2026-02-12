@@ -1,0 +1,83 @@
+{
+  "title": "Ambiente",
+  "description": "Gerencie as variáveis de ambiente do sistema",
+  "configStatus": "Status da Configuração",
+  "variablesInEnv": "Variáveis em .env",
+  "configFile": "Arquivo de configuração",
+  "customEnvVars": "Variáveis de Ambiente Personalizadas",
+  "customEnvVarsDescription": "Variáveis definidas pelo usuário para configuração personalizada.",
+  "presetEnvVars": "Variáveis de Ambiente Predefinidas",
+  "presetEnvVarsDescription": "Chaves de API, tokens e outras credenciais sensíveis do arquivo .env.",
+  "noPresetConfigured": "Nenhuma chave de API configurada",
+  "noEnvConfigured": "Nenhuma variável de ambiente configurada",
+  "noEnvConfiguredHelp": "Clique em \"Adicionar Variável\" para criar sua primeira variável",
+  "failedToLoad": "Falha ao carregar configuração",
+  "apiServerCheck": "Certifique-se de que o servidor de API está em execução",
+  "sensitive": "Sensível",
+  "sensitiveWarning": "Isso parece um valor sensível e será mascarado",
+  "leaveEmptyToKeep": "Deixe vazio para manter o valor atual",
+  "varNameHelp": "Use letras maiúsculas, números e sublinhados",
+  "env": {
+    "title": "Variáveis de Ambiente",
+    "description": "Configure chaves de API e configurações do sistema",
+    "searchPlaceholder": "Pesquisar variáveis...",
+    "key": "Chave",
+    "value": "Valor",
+    "source": "Fonte",
+    "sources": {
+      "env": "Ambiente",
+      "dotenv": "Arquivo .env",
+      "runtime": "Tempo de execução"
+    },
+    "empty": "Nenhuma variável de ambiente",
+    "emptyDescription": "Adicione variáveis de ambiente para configurar o sistema",
+    "masked": "••••••••",
+    "showValue": "Mostrar valor",
+    "hideValue": "Ocultar valor"
+  },
+  "add": {
+    "title": "Adicionar Variável",
+    "key": "Nome da Variável",
+    "keyPlaceholder": "MINHA_CHAVE_API",
+    "keyHelp": "Use letras maiúsculas e sublinhados",
+    "value": "Valor",
+    "valuePlaceholder": "Digite o valor...",
+    "adding": "Adicionando...",
+    "success": "Variável adicionada com sucesso",
+    "error": "Falha ao adicionar variável"
+  },
+  "edit": {
+    "title": "Editar Variável",
+    "saving": "Salvando...",
+    "success": "Variável atualizada com sucesso",
+    "error": "Falha ao atualizar variável"
+  },
+  "delete": {
+    "title": "Excluir Variável",
+    "confirm": "Tem certeza de que deseja excluir \"{{key}}\"?",
+    "description": "Isso pode afetar a funcionalidade do sistema.",
+    "deleting": "Excluindo...",
+    "success": "Variável excluída com sucesso",
+    "error": "Falha ao excluir variável"
+  },
+  "system": {
+    "title": "Sistema",
+    "export": "Exportar Dados do Sistema",
+    "exportDescription": "Exportar todas as habilidades e agentes para um arquivo ZIP",
+    "exporting": "Exportando...",
+    "exportSuccess": "Dados do sistema exportados com sucesso",
+    "exportError": "Falha ao exportar dados do sistema",
+    "import": "Importar Dados do Sistema",
+    "importDescription": "Importar habilidades e agentes de um arquivo ZIP",
+    "importing": "Importando...",
+    "importSuccess": "Dados do sistema importados com sucesso",
+    "importError": "Falha ao importar dados do sistema"
+  },
+  "about": {
+    "title": "Sobre",
+    "version": "Versão",
+    "documentation": "Documentação",
+    "github": "GitHub",
+    "license": "Licença"
+  }
+}

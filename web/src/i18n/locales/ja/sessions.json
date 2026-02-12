@@ -1,0 +1,40 @@
+{
+  "title": "セッション",
+  "description": "公開エージェントのチャットセッションを表示・管理",
+  "empty": "セッションがありません",
+  "emptyDescription": "公開エージェントとチャットしてセッションを作成してください",
+  "filters": {
+    "allAgents": "すべてのエージェント",
+    "byAgent": "エージェントでフィルター"
+  },
+  "card": {
+    "messageCount": "{{count}} メッセージ",
+    "firstMessage": "最初のメッセージ",
+    "created": "作成日時",
+    "lastActive": "最終アクティブ",
+    "noMessage": "空のセッション"
+  },
+  "delete": {
+    "title": "セッションを削除",
+    "confirm": "このセッションを削除してもよろしいですか？この操作は元に戻せません。",
+    "success": "セッションが削除されました",
+    "error": "セッションの削除に失敗しました"
+  },
+  "deleteAll": {
+    "title": "すべてのセッションを削除",
+    "confirm": "このエージェントのすべてのセッションを削除してもよろしいですか？",
+    "success": "すべてのセッションが削除されました",
+    "error": "セッションの削除に失敗しました"
+  },
+  "detail": {
+    "title": "セッション詳細",
+    "user": "ユーザー",
+    "assistant": "アシスタント",
+    "noMessages": "このセッションにはメッセージがありません"
+  },
+  "pagination": {
+    "showing": "{{total}} 件中 {{from}}–{{to}} を表示",
+    "page": "ページ {{current}} / {{total}}",
+    "showingAll": "{{total}} 件中 {{count}} 件を表示"
+  }
+}

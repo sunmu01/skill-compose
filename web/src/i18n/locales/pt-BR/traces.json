@@ -1,0 +1,99 @@
+{
+  "title": "Rastreamentos de Execução",
+  "description": "Visualize o histórico de execução do agente para depuração e análise",
+  "exportAll": "Exportar Tudo",
+  "backToSkills": "Voltar para Habilidades",
+  "filterPlaceholder": "Filtrar por status",
+  "all": "Todos",
+  "success": "Sucesso",
+  "failed": "Falhou",
+  "turns": "{{count}} turnos",
+  "tokens": "{{count}} tokens",
+  "showing": "Mostrando {{from}}–{{to}} de {{total}} rastreamentos",
+  "showingAll": "Mostrando {{count}} de {{total}} rastreamentos",
+  "page": "Página {{current}} / {{total}}",
+  "list": {
+    "title": "Rastreamentos de Execução",
+    "searchPlaceholder": "Pesquisar rastreamentos...",
+    "filterByStatus": "Filtrar por status",
+    "filterBySkill": "Filtrar por habilidade",
+    "allStatuses": "Todos os status",
+    "allSkills": "Todas as habilidades",
+    "empty": "Nenhum rastreamento de execução encontrado",
+    "emptyDescription": "Execute o agente para gerar rastreamentos"
+  },
+  "card": {
+    "request": "Requisição",
+    "response": "Resposta",
+    "duration": "Duração",
+    "turns": "{{count}} turno",
+    "turns_other": "{{count}} turnos",
+    "tokens": "{{count}} token",
+    "tokens_other": "{{count}} tokens",
+    "skills": "Habilidades usadas",
+    "tools": "Ferramentas chamadas"
+  },
+  "detail": {
+    "title": "Detalhe do Rastreamento",
+    "overview": "Visão Geral",
+    "steps": "Passos",
+    "request": "Requisição",
+    "response": "Resposta",
+    "answer": "Resposta",
+    "error": "Erro",
+    "skillsUsed": "Habilidades Usadas",
+    "metadata": "Metadados",
+    "backToTraces": "Rastreamentos",
+    "loadError": "Falha ao carregar rastreamento",
+    "turnsCount": "{{count}} turnos",
+    "tokenStats": "{{input}} entrada / {{output}} saída tokens"
+  },
+  "overview": {
+    "traceId": "ID do Rastreamento",
+    "status": "Status",
+    "startedAt": "Iniciado",
+    "completedAt": "Concluído",
+    "duration": "Duração",
+    "turns": "Turnos",
+    "inputTokens": "Tokens de Entrada",
+    "outputTokens": "Tokens de Saída",
+    "totalTokens": "Tokens Totais",
+    "skillsUsed": "Habilidades Usadas",
+    "toolsCalled": "Ferramentas Chamadas",
+    "error": "Erro"
+  },
+  "steps": {
+    "title": "Passos de Execução",
+    "titleWithCount": "Passos de Execução ({{count}})",
+    "step": "Passo {{number}}",
+    "toolCall": "Chamada de Ferramenta",
+    "toolResult": "Resultado da Ferramenta",
+    "input": "Entrada",
+    "output": "Saída",
+    "result": "Resultado",
+    "message": "Mensagem",
+    "thinking": "Pensando",
+    "empty": "Nenhum passo registrado"
+  },
+  "status": {
+    "pending": "Pendente",
+    "running": "Executando",
+    "completed": "Concluído",
+    "failed": "Falhou",
+    "cancelled": "Cancelado"
+  },
+  "delete": {
+    "title": "Excluir Rastreamento",
+    "confirm": "Tem certeza de que deseja excluir este rastreamento?",
+    "description": "Esta ação não pode ser desfeita.",
+    "deleting": "Excluindo...",
+    "success": "Rastreamento excluído com sucesso",
+    "error": "Falha ao excluir rastreamento"
+  },
+  "export": {
+    "title": "Exportar Rastreamento",
+    "asJson": "Exportar como JSON",
+    "success": "Rastreamento exportado com sucesso",
+    "error": "Falha ao exportar rastreamento"
+  }
+}

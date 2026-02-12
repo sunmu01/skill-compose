@@ -1,0 +1,46 @@
+# ==============================================================================
+# Executor: ChemScout - Chemistry & Cheminformatics Environment
+# ==============================================================================
+# Extends the base executor with chemistry, cheminformatics, and bioinformatics
+# packages for molecular analysis, database queries, and visualization.
+#
+# Included packages:
+# - rdkit (cheminformatics: SMILES, fingerprints, descriptors, reactions)
+# - biopython (molecular biology: sequence, PDB, NCBI/PubMed access)
+# - pubchempy (PubChem compound queries)
+# - datamol (friendly RDKit wrapper)
+# - numpy, pandas, scipy (scientific computing)
+# - matplotlib (visualization)
+# ==============================================================================
+
+FROM skillcompose/executor-base:latest
+
+LABEL org.opencontainers.image.title="Skills Executor - ChemScout"
+LABEL org.opencontainers.image.description="Chemistry and cheminformatics execution environment"
+LABEL org.opencontainers.image.version="1.0.0"
+
+# System dependencies for RDKit rendering and chemistry tools
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libxrender1 \
+    libxext6 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install scientific computing base
+RUN pip install --no-cache-dir \
+    numpy \
+    pandas \
+    scipy \
+    matplotlib
+
+# Install chemistry and cheminformatics packages
+RUN pip install --no-cache-dir \
+    rdkit \
+    biopython \
+    pubchempy \
+    datamol
+
+# Re-ensure jupyter kernel dependencies are intact after heavy installs
+RUN pip install --no-cache-dir jupyter_client>=8.0.0 ipykernel>=6.0.0
+
+# Set executor name
+ENV EXECUTOR_NAME=chemscout

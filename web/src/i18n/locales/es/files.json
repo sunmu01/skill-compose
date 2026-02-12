@@ -1,0 +1,69 @@
+{
+  "title": "Explorador de Archivos",
+  "description": "Explora, previsualiza y gestiona archivos del proyecto",
+  "browser": {
+    "title": "Explorador de Archivos",
+    "path": "Ruta",
+    "name": "Nombre",
+    "size": "Tamaño",
+    "modified": "Modificado",
+    "type": "Tipo",
+    "empty": "Directorio vacío",
+    "emptyDescription": "No hay archivos en este directorio",
+    "rootPath": "Raíz"
+  },
+  "preview": {
+    "title": "Vista Previa",
+    "noPreview": "Vista previa no disponible",
+    "tooLarge": "Archivo demasiado grande para vista previa",
+    "binary": "Archivo binario",
+    "image": "Imagen"
+  },
+  "upload": {
+    "title": "Subir Archivos",
+    "dropzone": "Arrastra archivos aquí o haz clic para explorar",
+    "uploading": "Subiendo {{name}}...",
+    "success": "Archivo subido exitosamente",
+    "error": "Error al subir el archivo",
+    "maxSize": "Tamaño máximo de archivo: {{size}}"
+  },
+  "download": {
+    "title": "Descargar",
+    "file": "Descargar archivo",
+    "folder": "Descargar carpeta como ZIP",
+    "preparing": "Preparando descarga...",
+    "success": "Descarga iniciada",
+    "error": "Error al descargar"
+  },
+  "delete": {
+    "title": "Eliminar",
+    "confirm": "¿Está seguro de que desea eliminar \"{{name}}\"?",
+    "description": "Esta acción no se puede deshacer.",
+    "deleting": "Eliminando...",
+    "success": "Eliminado exitosamente",
+    "error": "Error al eliminar"
+  },
+  "types": {
+    "folder": "Carpeta",
+    "file": "Archivo",
+    "image": "Imagen",
+    "video": "Video",
+    "audio": "Audio",
+    "document": "Documento",
+    "code": "Código",
+    "archive": "Archivo comprimido",
+    "unknown": "Desconocido"
+  },
+  "breadcrumb": {
+    "home": "Inicio",
+    "files": "Archivos"
+  },
+  "sort": {
+    "nameAsc": "Nombre (A→Z)",
+    "nameDesc": "Nombre (Z→A)",
+    "modifiedNewest": "Modificado (Más reciente)",
+    "modifiedOldest": "Modificado (Más antiguo)",
+    "sizeLargest": "Tamaño (Mayor)",
+    "sizeSmallest": "Tamaño (Menor)"
+  }
+}

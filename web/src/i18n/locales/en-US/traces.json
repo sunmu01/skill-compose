@@ -1,0 +1,99 @@
+{
+  "title": "Execution Traces",
+  "description": "View agent execution history for debugging and analysis",
+  "exportAll": "Export All",
+  "backToSkills": "Back to Skills",
+  "filterPlaceholder": "Filter by status",
+  "all": "All",
+  "success": "Success",
+  "failed": "Failed",
+  "turns": "{{count}} turns",
+  "tokens": "{{count}} tokens",
+  "showing": "Showing {{from}}–{{to}} of {{total}} traces",
+  "showingAll": "Showing {{count}} of {{total}} traces",
+  "page": "Page {{current}} / {{total}}",
+  "list": {
+    "title": "Execution Traces",
+    "searchPlaceholder": "Search traces...",
+    "filterByStatus": "Filter by status",
+    "filterBySkill": "Filter by skill",
+    "allStatuses": "All statuses",
+    "allSkills": "All skills",
+    "empty": "No execution traces found",
+    "emptyDescription": "Run the agent to generate traces"
+  },
+  "card": {
+    "request": "Request",
+    "response": "Response",
+    "duration": "Duration",
+    "turns": "{{count}} turn",
+    "turns_other": "{{count}} turns",
+    "tokens": "{{count}} token",
+    "tokens_other": "{{count}} tokens",
+    "skills": "Skills used",
+    "tools": "Tools called"
+  },
+  "detail": {
+    "title": "Trace Detail",
+    "overview": "Overview",
+    "steps": "Steps",
+    "request": "Request",
+    "response": "Response",
+    "answer": "Answer",
+    "error": "Error",
+    "skillsUsed": "Skills Used",
+    "metadata": "Metadata",
+    "backToTraces": "Traces",
+    "loadError": "Failed to load trace",
+    "turnsCount": "{{count}} turns",
+    "tokenStats": "{{input}} in / {{output}} out tokens"
+  },
+  "overview": {
+    "traceId": "Trace ID",
+    "status": "Status",
+    "startedAt": "Started",
+    "completedAt": "Completed",
+    "duration": "Duration",
+    "turns": "Turns",
+    "inputTokens": "Input Tokens",
+    "outputTokens": "Output Tokens",
+    "totalTokens": "Total Tokens",
+    "skillsUsed": "Skills Used",
+    "toolsCalled": "Tools Called",
+    "error": "Error"
+  },
+  "steps": {
+    "title": "Execution Steps",
+    "titleWithCount": "Execution Steps ({{count}})",
+    "step": "Step {{number}}",
+    "toolCall": "Tool Call",
+    "toolResult": "Tool Result",
+    "input": "Input",
+    "output": "Output",
+    "result": "Result",
+    "message": "Message",
+    "thinking": "Thinking",
+    "empty": "No steps recorded"
+  },
+  "status": {
+    "pending": "Pending",
+    "running": "Running",
+    "completed": "Completed",
+    "failed": "Failed",
+    "cancelled": "Cancelled"
+  },
+  "delete": {
+    "title": "Delete Trace",
+    "confirm": "Are you sure you want to delete this trace?",
+    "description": "This action cannot be undone.",
+    "deleting": "Deleting...",
+    "success": "Trace deleted successfully",
+    "error": "Failed to delete trace"
+  },
+  "export": {
+    "title": "Export Trace",
+    "asJson": "Export as JSON",
+    "success": "Trace exported successfully",
+    "error": "Failed to export trace"
+  }
+}

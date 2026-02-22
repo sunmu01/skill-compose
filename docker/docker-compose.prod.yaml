@@ -1,0 +1,217 @@
+# ==============================================================================
+# Skills API - Docker Compose (Production)
+# ==============================================================================
+# 生产环境部署配置，配合 OpenResty 反向代理使用
+#
+# 使用方法:
+#   cd docker
+#   cp .env.example .env  # 填入 API 密钥、AUTH_PASSWORD、JWT_SECRET
+#   docker compose -f docker-compose.prod.yaml up -d --build
+#
+# 与开发配置的区别:
+#   - 端口绑定到 127.0.0.1（仅宿主机 OpenResty 可达）
+#   - 添加 AUTH_PASSWORD / JWT_SECRET 认证环境变量
+#   - 添加 autoheal 容器自动重启
+#   - 移除 nginx profile（由 OpenResty 替代）
+# ==============================================================================
+
+name: skills-api
+
+services:
+  # ── 数据库 ─────────────────────────────────────────────────
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: skills-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${DB_USER:-skills}
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-skills123}
+      - POSTGRES_DB=${DB_NAME:-skills_api}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./db/init-test-db.sql:/docker-entrypoint-initdb.d/init-test-db.sql:ro
+    ports:
+      - "127.0.0.1:${DB_PORT:-62620}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-skills} -d ${DB_NAME:-skills_api}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - skills-network
+
+  # ── API 后端 ───────────────────────────────────────────────
+  api:
+    build:
+      context: ..
+      dockerfile: docker/api/Dockerfile
+    image: skillcompose/api:prod
+    container_name: skills-api
+    restart: unless-stopped
+    environment:
+      # LLM API Keys
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - UNSTRUCTURED_API_KEY=${UNSTRUCTURED_API_KEY:-}
+      - RAGFLOW_API_KEY=${RAGFLOW_API_KEY:-}
+      - RAGFLOW_BASE_URL=${RAGFLOW_BASE_URL:-}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY:-}
+      - MOONSHOT_API_KEY=${MOONSHOT_API_KEY:-}
+      - CLAUDE_MODEL=${CLAUDE_MODEL:-claude-sonnet-4-5-20250929}
+      - AGENT_MAX_TURNS=${AGENT_MAX_TURNS:-60}
+      # 认证
+      - AUTH_PASSWORD=${AUTH_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+      # 数据库
+      - DATABASE_URL=postgresql+asyncpg://${DB_USER:-skills}:${DB_PASSWORD:-skills123}@db:5432/${DB_NAME:-skills_api}
+      # 运行时
+      - DEBUG=${DEBUG:-false}
+      - TZ=${TZ:-UTC}
+      - SKILLS_DIR=/app/skills
+      - DATA_DIR=/app/data
+      - LOGS_DIR=/app/logs
+      - UPLOADS_DIR=/app/uploads
+      - CONFIG_DIR=/app/config
+      - BACKUPS_DIR=/app/backups
+    volumes:
+      - skills:/app/skills
+      - logs:/app/logs
+      - uploads:/app/uploads
+      - config:/app/config
+      - backups:/app/backups
+      - workspaces:/app/workspaces
+      - ./.env:/app/.env.seed:ro
+    ports:
+      - "127.0.0.1:${API_PORT:-62610}:62610"
+    depends_on:
+      db:
+        condition: service_healthy
+      executor-base:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:62610/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    networks:
+      - skills-network
+
+  # ── Web 前端 ───────────────────────────────────────────────
+  web:
+    build:
+      context: ..
+      dockerfile: docker/web/Dockerfile
+      args:
+        # 运行时通过 window.location.origin 推断，此处仅 SSR 回退
+        - NEXT_PUBLIC_API_URL=http://api:62610
+    image: skillcompose/web:prod
+    container_name: skills-web
+    restart: unless-stopped
+    environment:
+      - NEXT_PUBLIC_API_URL=http://api:62610
+      - TZ=${TZ:-UTC}
+    ports:
+      - "127.0.0.1:${WEB_PORT:-62600}:62600"
+    depends_on:
+      api:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:62600/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - skills-network
+
+  # ── 文档 ───────────────────────────────────────────────────
+  docs:
+    build:
+      context: ..
+      dockerfile: docker/docs/Dockerfile
+    image: skillcompose/docs:prod
+    container_name: skills-docs
+    restart: unless-stopped
+    command: ["serve", "-s", "build", "-l", "62630"]
+    environment:
+      - TZ=${TZ:-UTC}
+    ports:
+      - "127.0.0.1:${DOCS_PORT:-62630}:62630"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:62630/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - skills-network
+
+  # ── 执行器 (base) ─────────────────────────────────────────
+  executor-base:
+    build:
+      context: ..
+      dockerfile: docker/executor/Dockerfile.base
+    image: skillcompose/executor-base:prod
+    container_name: skills-executor-base
+    restart: unless-stopped
+    volumes:
+      - workspaces:/app/workspaces
+      - skills:/app/skills:ro
+      - uploads:/app/uploads:ro
+    environment:
+      - EXECUTOR_NAME=base
+      - EXECUTOR_PORT=62680
+      - SKILLS_DIR=/app/skills
+      - UPLOADS_DIR=/app/uploads
+      - DATA_DIR=/app/data
+      - TZ=${TZ:-UTC}
+    networks:
+      - skills-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:62680/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  # ── 自动重启 ───────────────────────────────────────────────
+  autoheal:
+    image: willfarrell/autoheal
+    container_name: skills-autoheal
+    restart: unless-stopped
+    environment:
+      - AUTOHEAL_CONTAINER_LABEL=all
+      - AUTOHEAL_INTERVAL=30
+      - AUTOHEAL_START_PERIOD=60
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+networks:
+  skills-network:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local
+  workspaces:
+    driver: local
+  skills:
+    driver: local
+  config:
+    driver: local
+  logs:
+    driver: local
+  uploads:
+    driver: local
+  backups:
+    driver: local

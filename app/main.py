@@ -18,9 +18,12 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.responses import JSONResponse as StarletteJSONResponse
 
 from app.config import get_settings
 from app.api.v1.router import api_router
+from app.api.v1.auth import verify_token
 from app.db.database import init_db, AsyncSessionLocal
 
 logger = logging.getLogger("skills_api")
@@ -139,6 +142,53 @@ def create_app() -> FastAPI:
         redoc_url="/redoc",
         lifespan=lifespan,
     )
+
+    # ── 认证中间件（白名单模式，AUTH_PASSWORD 为空时透明放行） ──
+    class AuthMiddleware(BaseHTTPMiddleware):
+        PUBLIC_PREFIXES = (
+            "/health",
+            "/docs",
+            "/redoc",
+            "/openapi.json",
+            "/api/v1/auth/",
+            "/api/v1/published/",
+        )
+
+        async def dispatch(self, request, call_next):
+            path = request.url.path
+
+            # 精确匹配根路径和健康检查
+            if path in ("/", "/health"):
+                return await call_next(request)
+
+            # 前缀匹配白名单
+            for prefix in self.PUBLIC_PREFIXES:
+                if path.startswith(prefix):
+                    return await call_next(request)
+
+            # AUTH_PASSWORD 未配置 = 认证禁用，全部放行
+            if not os.environ.get("AUTH_PASSWORD"):
+                return await call_next(request)
+
+            # 检查 Bearer token
+            auth_header = request.headers.get("authorization", "")
+            if not auth_header.startswith("Bearer "):
+                return StarletteJSONResponse(
+                    status_code=401,
+                    content={"detail": "Not authenticated"},
+                )
+
+            try:
+                verify_token(auth_header[7:])
+            except ValueError:
+                return StarletteJSONResponse(
+                    status_code=401,
+                    content={"detail": "Invalid or expired token"},
+                )
+
+            return await call_next(request)
+
+    app.add_middleware(AuthMiddleware)
 
     # CORS
     app.add_middleware(

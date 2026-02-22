@@ -230,5 +230,5 @@ data/*.db-journal
 uploads/*                   # Uploaded files
 uploads/.gitkeep           # Keep directory structure
 
-CLAUDE.md
+#CLAUDE.md
 

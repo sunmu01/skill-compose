@@ -3,6 +3,6 @@
 
 生产环境部署配置文件
 
-openresty-skill.conf: OpenResty 反向代理配置，skill.askdao.ai 域名，HTTPS/SSL 终止 + WebSocket/SSE 支持，部署到 /opt/1panel/www/conf.d/（绕过 1Panel 站点管理）
+openresty-skill.conf: OpenResty 反向代理配置，skill.askdao.ai 域名，HTTPS/SSL + WebSocket/SSE，upstream 使用 Docker 容器名（需 network connect），部署到 /opt/1panel/www/conf.d/
 
 [PROTOCOL]: 变更时更新此头部，然后检查 CLAUDE.md

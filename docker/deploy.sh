@@ -45,8 +45,17 @@ echo ""
 echo "Services status:"
 docker compose -f "$COMPOSE_FILE" ps
 
+# ── OpenResty 网络互通（首次部署需执行） ──────────────────
+OPENRESTY_CONTAINER="1Panel-openresty-rwhp"
+SKILLS_NETWORK="skills-api_skills-network"
+
+if ! docker network inspect "$SKILLS_NETWORK" --format '{{range .Containers}}{{.Name}} {{end}}' 2>/dev/null | grep -q "$OPENRESTY_CONTAINER"; then
+    echo "Connecting OpenResty to skills network..."
+    docker network connect "$SKILLS_NETWORK" "$OPENRESTY_CONTAINER"
+fi
+
 echo ""
 echo "OpenResty 配置部署:"
-echo "  1. 在 1Panel 删除 skill.askdao.ai 站点（如有）"
-echo "  2. cp deploy/openresty-skill.conf /opt/1panel/www/conf.d/skill.askdao.ai.conf"
-echo "  3. openresty -t && openresty -s reload"
+echo "  cp deploy/openresty-skill.conf /opt/1panel/www/conf.d/skill.askdao.ai.conf"
+echo "  docker exec $OPENRESTY_CONTAINER openresty -t"
+echo "  docker exec $OPENRESTY_CONTAINER openresty -s reload"

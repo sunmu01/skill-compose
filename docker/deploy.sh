@@ -44,3 +44,9 @@ fi
 echo ""
 echo "Services status:"
 docker compose -f "$COMPOSE_FILE" ps
+
+echo ""
+echo "OpenResty 配置部署:"
+echo "  1. 在 1Panel 删除 skill.askdao.ai 站点（如有）"
+echo "  2. cp deploy/openresty-skill.conf /opt/1panel/www/conf.d/skill.askdao.ai.conf"
+echo "  3. openresty -t && openresty -s reload"

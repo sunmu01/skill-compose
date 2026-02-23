@@ -47,7 +47,10 @@ function authFetch(input: RequestInfo | URL, init?: RequestInit): Promise<Respon
   return globalThis.fetch(input, { ...init, headers }).then(res => {
     if (res.status === 401 && typeof window !== 'undefined') {
       clearToken();
-      window.location.href = '/login';
+      const path = window.location.pathname;
+      if (!path.startsWith('/login') && !path.startsWith('/published')) {
+        window.location.href = '/login';
+      }
     }
     return res;
   });

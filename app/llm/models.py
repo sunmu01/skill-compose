@@ -19,10 +19,10 @@ class ModelInfo(TypedDict):
 # Format: "provider/model" -> ModelInfo
 SUPPORTED_MODELS: Dict[str, ModelInfo] = {
     # Anthropic models (direct API)
-    "anthropic/claude-sonnet-4-5-20250929": {
+    "anthropic/claude-sonnet-4-6": {
         "provider": "anthropic",
-        "model_id": "claude-sonnet-4-5-20250929",
-        "display_name": "Claude Sonnet 4.5",
+        "model_id": "claude-sonnet-4-6",
+        "display_name": "Claude Sonnet 4.6",
         "context_limit": 200000,
         "supports_tools": True,
         "supports_vision": True,
@@ -36,47 +36,38 @@ SUPPORTED_MODELS: Dict[str, ModelInfo] = {
         "supports_vision": True,
     },
     # OpenAI direct models
-    "openai/gpt-4o": {
+    "openai/gpt-5.2": {
         "provider": "openai",
-        "model_id": "gpt-4o",
-        "display_name": "GPT-4o",
-        "context_limit": 128000,
+        "model_id": "gpt-5.2",
+        "display_name": "GPT-5.2",
+        "context_limit": 400000,
         "supports_tools": True,
         "supports_vision": True,
     },
-    "openai/gpt-4o-mini": {
+    "openai/gpt-5-mini": {
         "provider": "openai",
-        "model_id": "gpt-4o-mini",
-        "display_name": "GPT-4o Mini",
-        "context_limit": 128000,
+        "model_id": "gpt-5-mini",
+        "display_name": "GPT-5 Mini",
+        "context_limit": 400000,
         "supports_tools": True,
         "supports_vision": True,
     },
     # Google Gemini direct models
-    "google/gemini-2.0-flash": {
+    "google/gemini-3.1-pro-preview": {
         "provider": "google",
-        "model_id": "gemini-2.0-flash",
-        "display_name": "Gemini 2.0 Flash",
-        "context_limit": 1000000,
+        "model_id": "gemini-3.1-pro-preview",
+        "display_name": "Gemini 3.1 Pro Preview",
+        "context_limit": 200000,
         "supports_tools": True,
         "supports_vision": True,
     },
-    # DeepSeek direct models
-    "deepseek/deepseek-chat": {
-        "provider": "deepseek",
-        "model_id": "deepseek-chat",
-        "display_name": "DeepSeek Chat",
-        "context_limit": 64000,
+    "google/gemini-3-flash-preview": {
+        "provider": "google",
+        "model_id": "gemini-3-flash-preview",
+        "display_name": "Gemini 3 Flash Preview",
+        "context_limit": 200000,
         "supports_tools": True,
-        "supports_vision": False,
-    },
-    "deepseek/deepseek-reasoner": {
-        "provider": "deepseek",
-        "model_id": "deepseek-reasoner",
-        "display_name": "DeepSeek Reasoner",
-        "context_limit": 64000,
-        "supports_tools": True,
-        "supports_vision": False,
+        "supports_vision": True,
     },
     # Kimi (Moonshot AI) models
     "kimi/kimi-k2.5": {
@@ -84,93 +75,6 @@ SUPPORTED_MODELS: Dict[str, ModelInfo] = {
         "model_id": "kimi-k2.5",
         "display_name": "Kimi K2.5",
         "context_limit": 256000,
-        "supports_tools": True,
-        "supports_vision": True,
-    },
-    # OpenRouter models (access 200+ models via single API)
-    # Claude via OpenRouter
-    "openrouter/anthropic/claude-sonnet-4.5": {
-        "provider": "openrouter",
-        "model_id": "anthropic/claude-sonnet-4.5",
-        "display_name": "Claude Sonnet 4.5",
-        "context_limit": 200000,
-        "supports_tools": True,
-        "supports_vision": True,
-    },
-    "openrouter/anthropic/claude-opus-4.6": {
-        "provider": "openrouter",
-        "model_id": "anthropic/claude-opus-4.6",
-        "display_name": "Claude Opus 4.6",
-        "context_limit": 200000,
-        "supports_tools": True,
-        "supports_vision": True,
-    },
-    # DeepSeek via OpenRouter
-    "openrouter/deepseek/deepseek-chat-v3-0324": {
-        "provider": "openrouter",
-        "model_id": "deepseek/deepseek-chat-v3-0324",
-        "display_name": "DeepSeek V3.2",
-        "context_limit": 64000,
-        "supports_tools": True,
-        "supports_vision": False,
-    },
-    # Kimi via OpenRouter
-    "openrouter/moonshotai/kimi-k2.5": {
-        "provider": "openrouter",
-        "model_id": "moonshotai/kimi-k2.5",
-        "display_name": "Kimi K2.5",
-        "context_limit": 256000,
-        "supports_tools": True,
-        "supports_vision": True,
-    },
-    # Gemini via OpenRouter
-    "openrouter/google/gemini-3-flash-preview": {
-        "provider": "openrouter",
-        "model_id": "google/gemini-3-flash-preview",
-        "display_name": "Gemini 3 Flash Preview",
-        "context_limit": 1000000,
-        "supports_tools": True,
-        "supports_vision": True,
-    },
-    "openrouter/google/gemini-2.5-flash": {
-        "provider": "openrouter",
-        "model_id": "google/gemini-2.5-flash",
-        "display_name": "Gemini 2.5 Flash",
-        "context_limit": 1000000,
-        "supports_tools": True,
-        "supports_vision": True,
-    },
-    "openrouter/google/gemini-2.5-flash-lite": {
-        "provider": "openrouter",
-        "model_id": "google/gemini-2.5-flash-lite",
-        "display_name": "Gemini 2.5 Flash Lite",
-        "context_limit": 1000000,
-        "supports_tools": True,
-        "supports_vision": True,
-    },
-    # MiniMax via OpenRouter
-    "openrouter/minimax/minimax-m2.1": {
-        "provider": "openrouter",
-        "model_id": "minimax/minimax-m2.1",
-        "display_name": "MiniMax M2.1",
-        "context_limit": 1000000,
-        "supports_tools": True,
-        "supports_vision": True,
-    },
-    # Grok via OpenRouter
-    "openrouter/x-ai/grok-code-fast-1": {
-        "provider": "openrouter",
-        "model_id": "x-ai/grok-code-fast-1",
-        "display_name": "Grok Code Fast 1",
-        "context_limit": 131072,
-        "supports_tools": True,
-        "supports_vision": False,
-    },
-    "openrouter/x-ai/grok-4.1-fast": {
-        "provider": "openrouter",
-        "model_id": "x-ai/grok-4.1-fast",
-        "display_name": "Grok 4.1 Fast",
-        "context_limit": 131072,
         "supports_tools": True,
         "supports_vision": True,
     },
@@ -185,7 +89,6 @@ MODEL_CONTEXT_LIMITS: Dict[str, int] = {
 # Also add legacy model names for backward compatibility
 MODEL_CONTEXT_LIMITS.update({
     "claude-sonnet-4-5-20250929": 200000,
-    "claude-opus-4-6": 200000,
 })
 
 DEFAULT_CONTEXT_LIMIT = 200000

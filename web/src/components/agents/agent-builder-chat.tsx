@@ -42,8 +42,8 @@ export function AgentBuilderChat({
   // Configuration
   const [showConfig, setShowConfig] = useState(true);
   const [maxTurns, setMaxTurns] = useState(60);
-  const [selectedModelProvider, setSelectedModelProvider] = useState<string | null>('kimi');
-  const [selectedModelName, setSelectedModelName] = useState<string | null>('kimi-k2.5');
+  const [selectedModelProvider, setSelectedModelProvider] = useState<string | null>('anthropic');
+  const [selectedModelName, setSelectedModelName] = useState<string | null>('claude-sonnet-4-6');
 
   // Stable refs
   const sessionIdRef = useRef(sessionId);

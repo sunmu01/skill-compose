@@ -50,8 +50,8 @@
     "description": "Description",
     "systemPromptPlaceholder": "Additional instructions for the agent...",
     "systemPromptHelp": "Additional instructions appended to the default system prompt",
-    "modelDefault": "Default (Kimi K2.5)",
-    "modelHelp": "Select the LLM model to use (default: Kimi K2.5)",
+    "modelDefault": "Default (Claude Sonnet 4.6)",
+    "modelHelp": "Select the LLM model to use (default: Claude Sonnet 4.6)",
     "saveChanges": "Save Changes",
     "metadataTitle": "Metadata",
     "clearConversationTitle": "Clear Conversation",
@@ -108,8 +108,8 @@
     "maxTurns": "Max Turns",
     "maxTurnsHelp": "Maximum conversation turns (1-60000)",
     "modelLabel": "Model",
-    "modelDefault": "Default (Kimi K2.5)",
-    "modelHelp": "Select the LLM model to use (default: Kimi K2.5)",
+    "modelDefault": "Default (Claude Sonnet 4.6)",
+    "modelHelp": "Select the LLM model to use (default: Claude Sonnet 4.6)",
     "executorLabel": "Executor",
     "executorLocal": "Local",
     "executorHelp": "Default runs code locally in the API container. Select an executor to run in an isolated container.",
@@ -173,7 +173,7 @@
     },
     "dialogDescription": "Select the model that this published agent will use. Users will interact with this model when using your agent.",
     "modelHelp": "This model will be used for all conversations with the published agent.",
-    "noModelWarning": "No model selected. The default model (Kimi K2.5) will be used."
+    "noModelWarning": "No model selected. The default model (Claude Sonnet 4.6) will be used."
   },
   "unpublish": {
     "title": "Unpublish Agent",

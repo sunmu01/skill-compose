@@ -106,7 +106,7 @@ export default function FullscreenChatPage() {
     onSessionId: (id) => setSessionId(id),
     validateBeforeRun: () => {
       const state = useChatStore.getState();
-      const effectiveProvider = state.selectedModelProvider || 'kimi';
+      const effectiveProvider = state.selectedModelProvider || 'anthropic';
       const providers = modelsData?.providers;
       if (!providers) return null;
       const providerInfo = providers.find(p => p.name === effectiveProvider);

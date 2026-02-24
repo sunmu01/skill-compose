@@ -29,7 +29,7 @@
   "mcpDefaultNote": "MCP 服务器默认禁用。",
   "enterToSend": "回车发送",
   "attach": "附件",
-  "defaultModel": "默认 (Kimi K2.5)",
+  "defaultModel": "默认 (Claude Sonnet 4.6)",
   "agentNotAvailable": "Agent 不可用",
   "builtinTools": "内置工具",
   "selected": "已选",

@@ -87,7 +87,7 @@ Get started with Docker:
 ```bash
 git clone https://github.com/MooseGoose0701/skill-compose.git
 cd skill-compose/docker
-# Default model is Kimi 2.5 (thinking disabled, API key: MOONSHOT_API_KEY), add at least one LLM API key.
+# Default model is Claude Sonnet 4.6 (API key: ANTHROPIC_API_KEY), add at least one LLM API key.
 # You can also set API KEYs manually in the Web UI "Environment" after launch.
 cp .env.example .env
 docker compose up -d

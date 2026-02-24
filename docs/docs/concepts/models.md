@@ -21,7 +21,7 @@ Skill Compose supports multiple LLM providers. Each provider requires its own AP
 | **DeepSeek** | deepseek-reasoner | 64K | Yes | No | `DEEPSEEK_API_KEY` |
 
 :::info Default Model
-**Kimi K2.5** is the default model. Set `MOONSHOT_API_KEY` in your `.env` file to use it.
+**Claude Sonnet 4.6** is the default model. Set `ANTHROPIC_API_KEY` in your `.env` file to use it.
 :::
 
 ### OpenRouter

@@ -16,7 +16,7 @@ No. You can create and use agents entirely through the web UI using natural lang
 
 ### Which LLM providers are supported?
 
-Moonshot (Kimi K2.5, default), Anthropic (Claude), OpenAI (GPT-4o), Google (Gemini), DeepSeek, and OpenRouter. You need at least one API key. See [Models](/concepts/models) for the full list.
+Anthropic (Claude Sonnet 4.6, default), Moonshot (Kimi K2.5), OpenAI (GPT-4o), Google (Gemini), and OpenRouter. You need at least one API key. See [Models](/concepts/models) for the full list.
 
 ### Where is my data stored?
 

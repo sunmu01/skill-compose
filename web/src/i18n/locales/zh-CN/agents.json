@@ -50,8 +50,8 @@
     "description": "描述",
     "systemPromptPlaceholder": "为代理添加额外指令...",
     "systemPromptHelp": "附加到默认系统提示词的额外指令",
-    "modelDefault": "默认 (Kimi K2.5)",
-    "modelHelp": "选择要使用的 LLM 模型（默认：Kimi K2.5）",
+    "modelDefault": "默认 (Claude Sonnet 4.6)",
+    "modelHelp": "选择要使用的 LLM 模型（默认：Claude Sonnet 4.6）",
     "saveChanges": "保存更改",
     "metadataTitle": "元数据",
     "clearConversationTitle": "清除对话",
@@ -108,8 +108,8 @@
     "maxTurns": "最大轮数",
     "maxTurnsHelp": "最大对话轮数 (1-60000)",
     "modelLabel": "模型",
-    "modelDefault": "默认 (Kimi K2.5)",
-    "modelHelp": "选择要使用的 LLM 模型（默认：Kimi K2.5）",
+    "modelDefault": "默认 (Claude Sonnet 4.6)",
+    "modelHelp": "选择要使用的 LLM 模型（默认：Claude Sonnet 4.6）",
     "executorLabel": "执行器",
     "executorLocal": "本地",
     "executorHelp": "默认在 API 容器中本地运行代码。选择执行器可在隔离容器中运行。",
@@ -173,7 +173,7 @@
     },
     "dialogDescription": "选择此已发布代理将使用的模型。用户将通过此模型与你的代理交互。",
     "modelHelp": "此模型将用于已发布代理的所有对话。",
-    "noModelWarning": "未选择模型。将使用默认模型 (Kimi K2.5)。"
+    "noModelWarning": "未选择模型。将使用默认模型 (Claude Sonnet 4.6)。"
   },
   "unpublish": {
     "title": "取消发布代理",

@@ -29,7 +29,7 @@
   "mcpDefaultNote": "MCP servers are disabled by default.",
   "enterToSend": "Enter to send",
   "attach": "Attach",
-  "defaultModel": "Default (Kimi K2.5)",
+  "defaultModel": "Default (Claude Sonnet 4.6)",
   "agentNotAvailable": "Agent Not Available",
   "builtinTools": "Built-in Tools",
   "selected": "selected",

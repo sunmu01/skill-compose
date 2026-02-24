@@ -50,8 +50,8 @@
     "description": "Descrição",
     "systemPromptPlaceholder": "Instruções adicionais para o agente...",
     "systemPromptHelp": "Instruções adicionais anexadas ao prompt do sistema padrão",
-    "modelDefault": "Padrão (Kimi K2.5)",
-    "modelHelp": "Selecione o modelo LLM a usar (padrão: Kimi K2.5)",
+    "modelDefault": "Padrão (Claude Sonnet 4.6)",
+    "modelHelp": "Selecione o modelo LLM a usar (padrão: Claude Sonnet 4.6)",
     "saveChanges": "Salvar Alterações",
     "metadataTitle": "Metadados",
     "clearConversationTitle": "Limpar Conversa",
@@ -108,8 +108,8 @@
     "maxTurns": "Turnos Máximos",
     "maxTurnsHelp": "Máximo de turnos de conversa (1-60000)",
     "modelLabel": "Modelo",
-    "modelDefault": "Padrão (Kimi K2.5)",
-    "modelHelp": "Selecione o modelo LLM a usar (padrão: Kimi K2.5)",
+    "modelDefault": "Padrão (Claude Sonnet 4.6)",
+    "modelHelp": "Selecione o modelo LLM a usar (padrão: Claude Sonnet 4.6)",
     "executorLabel": "Executor",
     "executorLocal": "Local",
     "executorHelp": "Por padrão executa código localmente no contêiner API. Selecione um executor para executar em um contêiner isolado.",
@@ -173,7 +173,7 @@
     },
     "dialogDescription": "Selecione o modelo que este agente publicado usará. Os usuários interagirão com este modelo ao usar seu agente.",
     "modelHelp": "Este modelo será usado para todas as conversas com o agente publicado.",
-    "noModelWarning": "Nenhum modelo selecionado. O modelo padrão (Kimi K2.5) será usado."
+    "noModelWarning": "Nenhum modelo selecionado. O modelo padrão (Claude Sonnet 4.6) será usado."
   },
   "unpublish": {
     "title": "Despublicar Agente",

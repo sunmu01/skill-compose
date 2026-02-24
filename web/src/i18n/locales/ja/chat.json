@@ -29,7 +29,7 @@
   "mcpDefaultNote": "MCPサーバーはデフォルトで無効です。",
   "enterToSend": "Enterで送信",
   "attach": "添付",
-  "defaultModel": "デフォルト (Kimi K2.5)",
+  "defaultModel": "デフォルト (Claude Sonnet 4.6)",
   "agentNotAvailable": "エージェントは利用できません",
   "builtinTools": "内蔵ツール",
   "selected": "選択済み",

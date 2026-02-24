@@ -50,8 +50,8 @@
     "description": "説明",
     "systemPromptPlaceholder": "エージェントへの追加指示...",
     "systemPromptHelp": "デフォルトのシステムプロンプトに追加される指示",
-    "modelDefault": "デフォルト (Kimi K2.5)",
-    "modelHelp": "使用するLLMモデルを選択（デフォルト：Kimi K2.5）",
+    "modelDefault": "デフォルト (Claude Sonnet 4.6)",
+    "modelHelp": "使用するLLMモデルを選択（デフォルト：Claude Sonnet 4.6）",
     "saveChanges": "変更を保存",
     "metadataTitle": "メタデータ",
     "clearConversationTitle": "会話をクリア",
@@ -108,8 +108,8 @@
     "maxTurns": "最大ターン数",
     "maxTurnsHelp": "会話の最大ターン数 (1-60000)",
     "modelLabel": "モデル",
-    "modelDefault": "デフォルト (Kimi K2.5)",
-    "modelHelp": "使用するLLMモデルを選択（デフォルト：Kimi K2.5）",
+    "modelDefault": "デフォルト (Claude Sonnet 4.6)",
+    "modelHelp": "使用するLLMモデルを選択（デフォルト：Claude Sonnet 4.6）",
     "executorLabel": "エグゼキューター",
     "executorLocal": "ローカル",
     "executorHelp": "デフォルトではAPIコンテナ内でローカル実行されます。エグゼキューターを選択すると隔離コンテナで実行されます。",
@@ -173,7 +173,7 @@
     },
     "dialogDescription": "この公開エージェントが使用するモデルを選択してください。ユーザーはこのモデルを通じてエージェントと対話します。",
     "modelHelp": "このモデルは公開エージェントのすべての会話に使用されます。",
-    "noModelWarning": "モデルが選択されていません。デフォルトモデル (Kimi K2.5) が使用されます。"
+    "noModelWarning": "モデルが選択されていません。デフォルトモデル (Claude Sonnet 4.6) が使用されます。"
   },
   "unpublish": {
     "title": "エージェントの公開を解除",

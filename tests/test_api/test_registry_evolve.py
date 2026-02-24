@@ -39,7 +39,7 @@ async def test_evolve_skill_returns_task(
         (skill_dir / "SKILL.md").write_text("# Test")
 
         mock_settings.custom_skills_dir = str(tmp_path)
-        mock_settings.default_model_name = "kimi-k2.5"
+        mock_settings.default_model_name = "claude-sonnet-4-6"
         mock_tm.create_task_async = AsyncMock(return_value=mock_task)
         mock_tm.run_in_background = MagicMock()
 

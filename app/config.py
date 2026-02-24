@@ -33,11 +33,11 @@ class Settings(BaseSettings):
     google_api_key: str = ""  # For Gemini
 
     # Default model configuration
-    default_model_provider: str = "kimi"
-    default_model_name: str = "kimi-k2.5"
+    default_model_provider: str = "anthropic"
+    default_model_name: str = "claude-sonnet-4-6"
 
     # Legacy: claude_model for backward compatibility
-    claude_model: str = "claude-sonnet-4-5-20250929"
+    claude_model: str = "claude-sonnet-4-6"
 
     # Agent configuration
     agent_max_turns: int = 60

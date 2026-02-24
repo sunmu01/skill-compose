@@ -55,7 +55,7 @@ export const ModelSelect = React.memo(function ModelSelect({
   size = 'default',
   className,
   disabled,
-  placeholder = 'Default (Kimi K2.5)',
+  placeholder = 'Default (Claude Sonnet 4.6)',
   'aria-label': ariaLabel = 'Model',
 }: ModelSelectProps) {
   const selectValue = modelProvider && modelName

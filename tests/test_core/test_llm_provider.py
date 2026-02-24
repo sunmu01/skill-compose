@@ -29,10 +29,10 @@ class TestLLMClientInit:
     """Test LLMClient initialization."""
 
     def test_default_provider(self):
-        """Default provider should be kimi."""
+        """Default provider should be anthropic."""
         client = LLMClient()
-        assert client.provider == "kimi"
-        assert client.model == "kimi-k2.5"
+        assert client.provider == "anthropic"
+        assert client.model == "claude-sonnet-4-6"
 
     def test_custom_provider(self):
         """Can specify custom provider and model."""

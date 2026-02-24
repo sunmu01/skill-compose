@@ -101,6 +101,7 @@ services:
       start_period: 10s
     networks:
       - skills-network
+      - proxy
 
   # ── Web 前端 ───────────────────────────────────────────────
   web:
@@ -129,6 +130,7 @@ services:
       start_period: 30s
     networks:
       - skills-network
+      - proxy
 
   # ── 文档 ───────────────────────────────────────────────────
   docs:
@@ -151,6 +153,7 @@ services:
       start_period: 30s
     networks:
       - skills-network
+      - proxy
 
   # ── 执行器 (base) ─────────────────────────────────────────
   executor-base:
@@ -199,6 +202,9 @@ services:
 networks:
   skills-network:
     driver: bridge
+  proxy:
+    external: true
+    name: skills-proxy
 
 volumes:
   db_data:

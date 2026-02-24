@@ -45,13 +45,17 @@ echo ""
 echo "Services status:"
 docker compose -f "$COMPOSE_FILE" ps
 
-# ── OpenResty 网络互通（首次部署需执行） ──────────────────
+# ── OpenResty 代理网络（external，不随 compose 销毁） ──────
 OPENRESTY_CONTAINER="1Panel-openresty-rwhp"
-SKILLS_NETWORK="skills-api_skills-network"
+PROXY_NETWORK="skills-proxy"
 
-if ! docker network inspect "$SKILLS_NETWORK" --format '{{range .Containers}}{{.Name}} {{end}}' 2>/dev/null | grep -q "$OPENRESTY_CONTAINER"; then
-    echo "Connecting OpenResty to skills network..."
-    docker network connect "$SKILLS_NETWORK" "$OPENRESTY_CONTAINER"
+# 确保 external 网络存在（首次部署创建）
+docker network create "$PROXY_NETWORK" 2>/dev/null || true
+
+# 确保 OpenResty 接入代理网络
+if ! docker network inspect "$PROXY_NETWORK" --format '{{range .Containers}}{{.Name}} {{end}}' 2>/dev/null | grep -q "$OPENRESTY_CONTAINER"; then
+    echo "Connecting OpenResty to proxy network..."
+    docker network connect "$PROXY_NETWORK" "$OPENRESTY_CONTAINER"
 fi
 
 echo ""
